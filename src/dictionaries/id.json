@@ -1,0 +1,411 @@
+{
+  "navigation": {
+    "home": "Beranda",
+    "about": "Tentang Kami",
+    "products": "Produk & Layanan",
+    "partners": "Mitra Kami",
+    "contact": "Kontak Kami",
+    "cta_consult": "Konsultasi Sekarang"
+  },
+  "hero": {
+    "pill": "Dipercaya Sejak 2010",
+    "headline": {
+      "line1": "Mitra Asuransi",
+      "line2": {
+        "a": "Terpercaya",
+        "b": "untuk",
+        "c": "Keamanan"
+      },
+      "line3": "Bisnis Anda"
+    },
+    "badge": "Mitra Asuransi Terpercaya",
+    "title": "Mitra Asuransi Terpercaya untuk Bisnis Anda",
+    "subtitle": "Layanan surety bond dan bank garansi profesional yang disesuaikan dengan kebutuhan bisnis Anda. Cepat, andal, dan dipercaya oleh perusahaan terkemuka di Indonesia.",
+    "cta_primary": "Konsultasi Sekarang",
+    "cta_secondary": "Layanan Kami",
+    "trusted_by": "Dipercaya oleh perusahaan terkemuka"
+  },
+  "home": {
+    "reliable_title": "Mitra Asuransi Andal Anda",
+    "reliable_subtitle": "Solusi perlindungan dan penjaminan yang cepat, aman, dan sesuai kebutuhan bisnis Anda.",
+    "about_section": {
+      "pill": "Tentang Asuransi DWP",
+      "pill_prefix": "Tentang DWP",
+      "pill_highlight": "Asuransi",
+      "desc": "PT. Dwi Kusuma Perkasa (DWP Insurance Services) adalah broker asuransi terkemuka di Indonesia, yang mengkhususkan diri dalam surety bond, jaminan bank, dan solusi asuransi komprehensif untuk bisnis dari semua ukuran.",
+      "cta": "Pelajari Lebih Lanjut Tentang Kami",
+      "vision_more": "Baca selengkapnya",
+      "vision_close": "Tutup",
+      "mission_intro": "Komitmen kami dalam memberikan layanan terbaik untuk mitra dan klien.",
+      "cards": {
+        "established": {
+          "title": "Perusahaan yang sudah berdiri",
+          "desc": "Lebih dari 15 tahun pengalaman di bidang asuransi dan layanan jaminan obligasi."
+        },
+        "trusted": {
+          "title": "Mitra Terpercaya",
+          "desc": "Melayani lebih dari 500 perusahaan di berbagai industri di Indonesia"
+        },
+        "presence": {
+          "title": "Jangkauan Nasional",
+          "desc": "Beroperasi secara nasional dengan jaringan yang kuat dan keahlian lokal."
+        },
+        "leader": {
+          "title": "Pemimpin Industri",
+          "desc": "Diakui atas keunggulan dalam pelayanan dan kepuasan pelanggan."
+        }
+      }
+    },
+    "hero_cards": {
+      "secure_title": "Aman & Terpercaya",
+      "secure_desc": "Solusi penjaminan bank",
+      "fast_title": "Proses Cepat",
+      "fast_desc": "Waktu persetujuan singkat",
+      "professional_title": "Profesional",
+      "professional_desc": "Konsultasi ahli",
+      "support_value": "24/7",
+      "support_title": "Customer Support",
+      "support_desc": "Selalu siap membantu"
+    },
+    "hero_stats": {
+      "experience": { "value": "15+", "label": "Tahun Pengalaman" },
+      "clients": { "value": "500+", "label": "Klien Terlayani" },
+      "satisfaction": { "value": "98%", "label": "Kepuasan" }
+    },
+    "comprehensive_title": "Solusi Asuransi Komprehensif",
+    "comprehensive_subtitle": "Layanan asuransi dan penjaminan yang dirancang untuk mendukung proyek dan operasional bisnis Anda.",
+    "different_title": "Apa yang Membuat Kami Berbeda",
+    "different_subtitle": "Mengutamakan kecepatan, transparansi, dan kualitas layanan untuk setiap kebutuhan klien.",
+    "different_pill": "Mengapa Memilih Kami?",
+    "stats": {
+      "experience": { "value": "4+", "label": "Tahun-tahun Keunggulan" },
+      "clients": { "value": "500+", "label": "Klien yang Puas" },
+      "success": { "value": "98%", "label": "Kepuasan Pelanggan" },
+      "support": { "value": "24/7", "label": "Dukungan Pelanggan" }
+    },
+    "process_pill": "Cara Kerjanya",
+    "process_title": "Proses yang Sederhana & Mudah",
+    "process_subtitle": "Dapatkan perlindungan asuransi Anda hanya dalam 4 langkah mudah dengan proses kami yang efisien.",
+    "process_duration_label": "Waktu pemrosesan rata-rata",
+    "process_duration_value": "2-3",
+    "process_duration_unit": "Hari",
+    "trusted_title": "Dipercaya oleh Perusahaan Terkemuka",
+    "trusted_subtitle": "Kami bekerja sama dengan mitra asuransi dan bank terpercaya untuk hasil yang optimal.",
+    "our_services_badge": "Layanan Kami",
+    "our_services_title": "Solusi Asuransi & Penjaminan",
+    "our_services_desc": "Pilih produk yang sesuai, kami bantu proses dari konsultasi sampai penerbitan."
+  },
+  "about": {
+    "title": "Tentang DWP",
+    "subtitle": "Gambaran Perusahaan",
+    "desc": "PT. Dwi Kusuma Perkasa adalah konsultan asuransi dan manajemen risiko terkemuka yang berdedikasi untuk memberikan solusi perlindungan terbaik bagi bisnis Anda.",
+    "page": {
+      "back_home": "Kembali ke Beranda",
+      "pill": "Tentang Layanan Asuransi DWP",
+      "title": "Tentang Kami",
+      "lead": "PT. Dwi Kusuma Perkasa adalah perusahaan yang bergerak dalam bidang konsultan bisnis, khususnya dalam penyediaan layanan Bank Garansi, Surety Bond, Custom Bond, dan Asuransi Umum. Kami berdedikasi untuk membantu para mitra dalam meningkatkan kinerja bisnis mereka melalui solusi yang inovatif dan terpercaya.",
+      "branches_pill": "Data Cabang",
+      "branches_title": "Cabang & Jangkauan Layanan",
+      "branches_subtitle": "Kantor pusat di Jakarta, dengan layanan konsultasi dan penerbitan yang menjangkau berbagai wilayah di Indonesia.",
+      "branches": [
+        {
+          "title": "Kantor Pusat",
+          "desc": "Jakarta Utara"
+        },
+        {
+          "title": "Jangkauan Layanan",
+          "desc": "Melayani kebutuhan bisnis secara nasional melalui jaringan mitra dan dukungan tim."
+        }
+      ],
+      "branches_list": [
+        { "name": "Bandar Lampung", "phone": "+62 85279627653", "address": "Jl. Pulau Singkep No. 126 Ruko E, Kel. Sukarame Baru, Kec. Sukarame, Kota Bandar Lampung" },
+        { "name": "Banjarmasin", "phone": "+62 8115133397", "address": "Komplek Palace Blok A No. 4 Tanta Hulu, Kec. Tanta, Kab. Tabalong, Kalimantan Selatan" },
+        { "name": "Bandung", "phone": "+62 85213599998", "address": "Jl. H. Sugandi No. 5 Komp. Bumi Manjahlega Indah RT 006 RW 013, Kel. Manjahlega, Kec. Rancasari, Kota Bandung" },
+        { "name": "Pontianak", "phone": "+62 85255229191", "address": "Jl. Kesehatan Gg. Amanah No. 11 (rumah ke-2 sebelah kiri) RT 001 RW 012, Kel. Kota Baru, Kec. Pontianak Selatan, Kota Pontianak" },
+        { "name": "Surabaya", "phone": "+62 81233774583", "address": "Jl. Krukah Tengah No. 73, Surabaya" },
+        { "name": "Balikpapan", "phone": "+62 85321819290", "address": "Ruko Sepinggan Pratama Blok SQ3–11, Jl. Sepinggan Pratama, Sepinggan, Kec. Balikpapan Selatan, Kota Balikpapan" },
+        { "name": "Solo", "phone": "+62 81318253224", "address": "Jl. Ahmad Yani 40, The Sunan Hotel (Lobby Hotel Arcade I), 57143, Gilingan, Banjarsari, Kota Surakarta, Jawa Tengah 57134" },
+        { "name": "Jambi", "phone": "+62 81320082085", "address": "Alifia Residence Blok E, 05, Kel. Kenali Asam Atas, Kec. Kota Baru, Kota Jambi" },
+        { "name": "Makassar", "phone": "+62 85299216789", "address": "Komplek Zamrud 2 Blok J No. 14, Jl. Adyaksa Baru, Kel. Masale, Kec. Panakkukang, Kota Makassar" },
+        { "name": "Banda Aceh", "phone": "+62 811671313", "address": "Jl. Cut Nyan Dhien No. 464, Lamteumen Barat, Kec. Jaya Baru, Kota Banda Aceh" },
+        { "name": "Palembang", "phone": "+62 81373795859", "address": "Jl. Basuki Rahmat No. 1674 RT 025 RW 006, Kel. Pahlawan, Kec. Ilir Timur I, Palembang 30126" },
+        { "name": "Kendari", "phone": "+62 82258674205", "address": "Jl. Sao-Sao, Kel. Bende, Kec. Kadia, Kota Kendari, Sulawesi Tenggara" },
+        { "name": "Bali", "phone": "+62 818135175", "address": "Jl. Wani No. 1 Gerokgak Gede, Desa Delod Peken, Kec. Tabanan, Kab. Tabanan, Provinsi Bali" },
+        { "name": "Mataram", "phone": "+62 82341507928", "address": "Jl. Airlangga No. 11x, Gomong, Kec. Selaparang, Kota Mataram, Nusa Tenggara Barat" },
+        { "name": "Batam", "phone": "+62 82367081206", "address": "Komplek Bumi Riau Makmur Blok D No. 14, Jl. Laksamana Bintan, Sungai Panas, Batam" }
+      ],
+      "history_pill": "Sejarah Perusahaan",
+      "history_subtitle": "Perjalanan kami membangun layanan yang cepat, aman, dan dapat diandalkan.",
+      "values_pill": "Nilai-nilai Perusahaan",
+      "values_title": "Tata Nilai Perusahaan",
+      "values_subtitle": "Nilai-nilai yang menjadi landasan dalam setiap layanan yang kami berikan",
+      "cta_title": "Siap Bermitra Dengan Kami?",
+      "cta_desc": "Hubungi tim kami untuk konsultasi gratis dan temukan solusi asuransi terbaik untuk bisnis Anda.",
+      "cta_button": "Hubungi Kami Sekarang"
+    },
+    "vision": "Visi Kami",
+    "vision_desc": "Menjadi Mitra asuransi yang terkemuka dan terpercaya di Indonesia yang di dukung oleh Sumber Daya Manusia yang berkomitmen penuh dan inovatif untuk membantu para mitra mendapatkan proteksi asuransi dan management resiko dengan cepat, mudah dan sesuai kebutuhan serta tepat guna.",
+    "mission": "Misi Kami",
+    "role_title": "Konsultan Bisnis & Asuransi",
+    "mission_items": {
+      "focus": {
+        "title": "Fokus",
+        "desc": "Menyediakan keahlian dan managemen resiko bagi para klien."
+      },
+      "commitment": {
+        "title": "Komitmen",
+        "desc": "Memberikan layanan asuransi profesional untuk memenuhi kepuasan para mitra, tertanggung dan pemangku kepentingan,"
+      },
+      "trusted": {
+        "title": "Terpercaya",
+        "desc": "Memberikan solusi asuransi sesuai kebutuhan tertanggung dan para mitra, membangun pengalaman terbaik para mitra dalam memberikan solusi perlindungan dan memberikan layanan terbaik."
+      },
+      "consistent": {
+        "title": "Konsisten",
+        "desc": "Meningkatkan serta memiliki sumber daya manusia yang profesional, berintegritas, penuh loyalitas dan inovatif."
+      }
+    },
+    "values": {
+      "title": "Nilai Inti Kami",
+      "items": {
+        "integrity": {
+          "title": "Integritas",
+          "desc": "Menjunjung tinggi standar etika tertinggi dalam semua tindakan kami."
+        },
+        "innovation": {
+          "title": "Inovasi",
+          "desc": "Terus meningkatkan layanan kami dengan solusi modern."
+        },
+        "excellence": {
+          "title": "Keunggulan",
+          "desc": "Berusaha untuk mencapai keunggulan dalam setiap aspek bisnis kami."
+        }
+      }
+    },
+    "legal": {
+      "title": "Legalitas & Kepatuhan",
+      "subtitle": "Kami beroperasi dengan izin resmi dan mematuhi regulasi yang berlaku.",
+      "items": [
+        "Akta Pendirian & Registrasi AHU",
+        "NIB (Nomor Induk Berusaha)",
+        "Kepatuhan OJK (sesuai ketentuan)",
+        "Bekerja sama dengan asuransi dan bank berizin"
+      ]
+    },
+    "timeline": {
+      "title": "Perjalanan Kami",
+      "items": [
+        {
+          "year": "2023",
+          "title": "Perusahaan Berdiri",
+          "desc": "PT. Dwi Kusuma Perkasa hadir untuk mendukung bisnis dengan solusi asuransi dan manajemen risiko."
+        },
+        {
+          "year": "2024",
+          "title": "Ekspansi Layanan",
+          "desc": "Memperluas layanan Bank Garansi dan Surety Bond untuk berbagai sektor dan wilayah."
+        },
+        {
+          "year": "2025",
+          "title": "Peningkatan Operasional",
+          "desc": "Memperkuat SOP dan jaringan mitra untuk proses penerbitan yang lebih cepat dan andal."
+        }
+      ]
+    },
+    "cta": "Lebih Lanjut Tentang Kami"
+  },
+  "services": {
+    "title": "Produk & Layanan",
+    "subtitle": "Solusi Komprehensif",
+    "items": {
+      "bank_garansi": {
+        "title": "Bank Garansi",
+        "desc": "Jaminan pembayaran yang diterbitkan oleh bank untuk mendukung kelancaran proyek Anda."
+      },
+      "surety_bond": {
+        "title": "Surety Bond",
+        "desc": "Perjanjian jaminan tiga pihak untuk memastikan pemenuhan kewajiban kontrak."
+      },
+      "custom_bond": {
+        "title": "Custom Garansi",
+        "desc": "Jaminan kepabeanan yang diterbitkan untuk mendukung kelancaran proses kepabeanan."
+      },
+      "general_insurance": {
+        "title": "Asuransi Umum",
+        "desc": "Perlindungan menyeluruh untuk aset dan operasional bisnis dari berbagai risiko."
+      }
+    },
+    "cta": "Lihat Semua Layanan",
+    "learn_more": "Selengkapnya",
+    "aria_view_details": "Lihat detail untuk {title}"
+  },
+  "why_choose_us": {
+    "title": "Mengapa Memilih Kami",
+    "subtitle": "Keunggulan Kami",
+    "items": {
+      "professional": {
+        "title": "Profesional & Integritas",
+        "desc": "Kami menjunjung tinggi standar etika dan profesionalisme dalam setiap layanan."
+      },
+      "technology": {
+        "title": "Teknologi & Inovasi",
+        "desc": "Memanfaatkan teknologi terkini untuk proses yang cepat dan efisien."
+      },
+      "fast_response": {
+        "title": "Respons Cepat",
+        "desc": "Tim kami siap memberikan tanggapan dan solusi dengan segera."
+      },
+      "client_satisfaction": {
+        "title": "Kepuasan Klien",
+        "desc": "Prioritas utama kami adalah memastikan kepuasan dan ketenangan pikiran Anda."
+      }
+    }
+  },
+  "process": {
+    "title": "Proses Konsultasi",
+    "subtitle": "Langkah Mudah",
+    "bottom_cta": "Mulai konsultasi",
+    "steps": {
+      "1": {
+        "title": "Konsultasi",
+        "desc": "Diskusikan kebutuhan asuransi Anda dengan tim ahli kami."
+      },
+      "2": {
+        "title": "Analisa Kebutuhan",
+        "desc": "Kami menganalisis risiko dan kebutuhan spesifik bisnis Anda."
+      },
+      "3": {
+        "title": "Penawaran",
+        "desc": "Kami memberikan penawaran solusi terbaik dengan harga kompetitif."
+      },
+      "4": {
+        "title": "Proses & Penerbitan",
+        "desc": "Proses administrasi cepat hingga polis asuransi diterbitkan."
+      }
+    }
+  },
+  "partners": {
+    "title": "Mitra Kami",
+    "subtitle": "Kerjasama Strategis",
+    "desc": "Kami bekerja sama dengan perusahaan asuransi terkemuka untuk memberikan layanan terbaik.",
+    "issuing_title": "Asuransi dan Bank Penerbit",
+    "featured_partner_desc": "PT Asuransi Bangun Askrida",
+    "featured_label": "Eksekutif Asuransi",
+    "groups": {
+      "insurance_bumn": "Asuransi & Penjaminan BUMN dan Anak BUMN",
+      "insurance_private": "Asuransi & Penjaminan Swasta",
+      "bank_government": "Bank Pemerintah",
+      "bank_private": "Bank Swasta"
+    },
+    "categories": {
+      "insurance": "Mitra Asuransi",
+      "bank": "Mitra Bank"
+    },
+    "list": {
+      "insurance": [
+        "Asuransi Jasindo",
+        "Asuransi Sinar Mas",
+        "Asuransi Tugu",
+        "Asuransi Astra Buana",
+        "Asuransi Zurich Indonesia",
+        "Asuransi Tokio Marine",
+        "BRI Insurance",
+        "Asuransi Chubb"
+      ],
+      "bank": [
+        "Bank Mandiri",
+        "Bank BRI",
+        "Bank BCA",
+        "Bank BNI",
+        "Bank BTN",
+        "CIMB Niaga",
+        "Bank Danamon",
+        "Bank Permata"
+      ]
+    }
+  },
+  "products": {
+    "title": "Produk & Layanan Kami",
+    "subtitle": "Solusi asuransi dan penjaminan komprehensif untuk kesuksesan bisnis Anda.",
+    "features_title": "Fitur Utama",
+    "consult_cta_prefix": "Konsultasi untuk",
+    "items": {
+      "bg": {
+        "title": "Bank Garansi",
+        "desc": "Bank Garansi adalah produk terpercaya yang menawarkan jaminan dan keamanan finansial, memberikan ketenangan dan perlindungan untuk transaksi keuangan.",
+        "features": ["Jaminan Penawaran", "Jaminan Pelaksanaan", "Jaminan Uang Muka", "Jaminan Pemeliharaan", "BG Akhir Tahun"]
+      },
+      "sb": {
+        "title": "Surety Bond",
+        "desc": "Surety Bond adalah jaminan keuangan yang dapat diandalkan dan aman yang menjamin kinerja dan penyelesaian kontrak atau kewajiban.",
+        "features": ["Jaminan Pemeliharaan", "Jaminan Pembayaran", "Jaminan Penawaran", "Jaminan Pelaksanaan", "Jaminan Uang Muka"]
+      },
+      "cb": {
+        "title": "Custom Garansi",
+        "desc": "Custom Garansi adalah jaminan pelaksanaan kepabeanan yang diterbitkan oleh perusahaan asuransi atau lembaga penjaminan.",
+        "features": ["LAYANG-LAYANG", "KABER", "Vooruitslag", "SPKPBM", "TPS", "Impor Sementara (OB 23)"]
+      },
+      "general": {
+        "title": "Asuransi Umum",
+        "desc": "Asuransi Umum memberikan perlindungan komprehensif atas aset dan kewajiban serta menjamin keamanan finansial.",
+        "features": ["Lambung Kapal", "Asuransi Kendaraan", "Asuransi Properti", "Tanggung Jawab Pihak Ketiga", "Kargo Laut"]
+      }
+    }
+  },
+  "contact": {
+    "title": "Hubungi Kami",
+    "subtitle": "Kami Siap Membantu",
+    "page_heading_line1": "TERHUBUNG",
+    "page_heading_line2": "DENGAN KAMI",
+    "address_label": "Alamat Kantor",
+    "address": "Office Tower Fontana Lt. 32 Unit C1 The Mansion Bougenville Jl. Trembesi Blok D, Jakarta Utara 14410",
+    "phone_label": "Telepon",
+    "phone": "+62 822-9988-7337",
+    "email_label": "Email",
+    "email": "info@kusumaperkasa.id",
+    "operational_hours": {
+      "label": "Jam Operasional",
+      "time": "Senin - Jumat, 09:00 - 17:00 WIB"
+    },
+    "form": {
+      "title": "Kirim pesan",
+      "subtitle": "Sampaikan kebutuhan Anda, tim kami akan segera merespons.",
+      "name": "Nama Lengkap",
+      "email": "Alamat Email",
+      "phone": "Nomor Telepon",
+      "subject": "Subjek",
+      "message": "Pesan Anda",
+      "submit": "Kirim Pesan",
+      "sending": "Mengirim...",
+      "success_title": "Pesan terkirim",
+      "success_desc": "Terima kasih telah menghubungi kami. Tim kami akan segera menghubungi Anda.",
+      "send_another": "Kirim pesan lagi"
+    },
+    "cta_strip": {
+        "title": "Ingin Konsultasi atau Butuh Penawaran?",
+        "button": "Hubungi Kami Sekarang"
+    },
+    "download_company_profile": "Unduh Company Profile"
+    ,
+    "home_strip": {
+      "title_line1": "Butuh Solusi Asuransi?",
+      "title_line2": "Mari Kita Bicara",
+      "subtitle": "Tim ahli kami siap memberikan solusi asuransi yang dipersonalisasi dan disesuaikan dengan kebutuhan bisnis Anda. Hubungi kami hari ini untuk konsultasi gratis.",
+      "office_label": "Kantor",
+      "office_value": "Jakarta, Indonesia",
+      "form_title": "Kirimkan pesan kepada kami",
+      "service_label": "Layanan Diperlukan",
+      "service_placeholder": "Pilih layanan",
+      "whatsapp_cta": "Ngobrol di WhatsApp"
+    }
+  },
+  "footer": {
+    "company_desc": "Mitra terpercaya untuk solusi asuransi dan manajemen risiko bisnis Anda.",
+    "brand_subtitle": "Layanan Asuransi",
+    "about_title": "Tentang",
+    "nav_title": "Navigasi",
+    "contact_title": "Kontak",
+    "social_title": "Ikuti Kami",
+    "copyright": "© 2024 PT. Dwi Kusuma Perkasa. All rights reserved."
+  }
+}

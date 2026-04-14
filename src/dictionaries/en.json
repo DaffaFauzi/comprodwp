@@ -1,0 +1,411 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "products": "Products & Services",
+    "partners": "Our Partners",
+    "contact": "Contact Us",
+    "cta_consult": "Consult Now"
+  },
+  "hero": {
+    "pill": "Trusted Since 2010",
+    "headline": {
+      "line1": "Trusted Insurance",
+      "line2": {
+        "a": "Partner",
+        "b": "for",
+        "c": "Your"
+      },
+      "line3": "Business Security"
+    },
+    "badge": "Trusted Insurance Partner",
+    "title": "Trusted Insurance Partner for Your Business",
+    "subtitle": "Professional surety bond and bank guarantee services tailored to your business needs. Fast, reliable, and trusted by leading companies across Indonesia.",
+    "cta_primary": "Consult Now",
+    "cta_secondary": "Our Services",
+    "trusted_by": "Trusted by leading companies"
+  },
+  "home": {
+    "reliable_title": "Your Reliable Insurance Partner",
+    "reliable_subtitle": "Fast, secure, and tailored insurance & guarantee solutions to support your business and projects.",
+    "about_section": {
+      "pill": "About DWP Insurance",
+      "pill_prefix": "About DWP",
+      "pill_highlight": "Insurance",
+      "desc": "PT. Dwi Kusuma Perkasa (DWP Insurance Services) is a leading insurance broker in Indonesia, specializing in surety bonds, bank guarantees, and comprehensive insurance solutions for businesses of all sizes.",
+      "cta": "Learn More About Us",
+      "vision_more": "Read more",
+      "vision_close": "Close",
+      "mission_intro": "Our commitment to delivering the best service for partners and clients.",
+      "cards": {
+        "established": {
+          "title": "Established Company",
+          "desc": "Over 15 years of experience in insurance and surety bond services"
+        },
+        "trusted": {
+          "title": "Trusted Partner",
+          "desc": "Serving 500+ companies across various industries in Indonesia"
+        },
+        "presence": {
+          "title": "National Presence",
+          "desc": "Operating nationwide with strong network and local expertise"
+        },
+        "leader": {
+          "title": "Industry Leader",
+          "desc": "Recognized for excellence in service and customer satisfaction"
+        }
+      }
+    },
+    "hero_cards": {
+      "secure_title": "Secure & Trusted",
+      "secure_desc": "Bank guaranteed solutions",
+      "fast_title": "Fast Process",
+      "fast_desc": "Quick approval time",
+      "professional_title": "Professional",
+      "professional_desc": "Expert consultation",
+      "support_value": "24/7",
+      "support_title": "Customer Support",
+      "support_desc": "Always ready to help"
+    },
+    "hero_stats": {
+      "experience": { "value": "15+", "label": "Years Experience" },
+      "clients": { "value": "500+", "label": "Clients Served" },
+      "satisfaction": { "value": "98%", "label": "Satisfaction" }
+    },
+    "comprehensive_title": "Comprehensive Insurance Solutions",
+    "comprehensive_subtitle": "Insurance and guarantee services designed to support your projects and business operations.",
+    "different_title": "What Makes Us Different",
+    "different_subtitle": "We prioritize speed, transparency, and service quality for every client need.",
+    "different_pill": "Why Choose Us?",
+    "stats": {
+      "experience": { "value": "4+", "label": "Years Experience" },
+      "clients": { "value": "500+", "label": "Satisfied Clients" },
+      "success": { "value": "98%", "label": "Customer Satisfaction" },
+      "support": { "value": "24/7", "label": "Customer Support" }
+    },
+    "process_pill": "How It Works",
+    "process_title": "Simple & Easy Process",
+    "process_subtitle": "Get your insurance protection in just 4 simple steps with our efficient process.",
+    "process_duration_label": "Average processing time",
+    "process_duration_value": "2-3",
+    "process_duration_unit": "Days",
+    "trusted_title": "Trusted by Leading Companies",
+    "trusted_subtitle": "We partner with trusted insurers and banks to deliver optimal results.",
+    "our_services_badge": "Our Service",
+    "our_services_title": "Insurance & Guarantee Solutions",
+    "our_services_desc": "Choose the right product and we will guide you from consultation to issuance."
+  },
+  "about": {
+    "title": "About DWP",
+    "subtitle": "Company Overview",
+    "desc": "PT. Dwi Kusuma Perkasa is a leading insurance and risk management consultant dedicated to providing the best protection solutions for your business.",
+    "page": {
+      "back_home": "Back to Home",
+      "pill": "About DWP Insurance Services",
+      "title": "About Us",
+      "lead": "PT. Dwi Kusuma Perkasa is a trusted insurance partner committed to delivering the best protection solutions for your business.",
+      "branches_pill": "Branches",
+      "branches_title": "Branches & Coverage",
+      "branches_subtitle": "Head office in Jakarta, with consultation and issuance services supporting businesses across Indonesia.",
+      "branches_list": [
+        { "name": "Bandar Lampung", "phone": "+62 85279627653", "address": "Jl. Pulau Singkep No. 126 Ruko E, Sukarame Baru, Sukarame, Bandar Lampung" },
+        { "name": "Banjarmasin", "phone": "+62 8115133397", "address": "Komplek Palace Blok A No. 4 Tanta Hulu, Kec. Tanta, Kab. Tabalong, South Kalimantan" },
+        { "name": "Bandung", "phone": "+62 85213599998", "address": "Jl. H. Sugandi No. 5, Komp. Bumi Manjahlega Indah RT 006 RW 013, Manjahlega, Rancasari, Bandung" },
+        { "name": "Pontianak", "phone": "+62 85255229191", "address": "Jl. Kesehatan Gg. Amanah No. 11 (2nd house on left) RT 001 RW 012, Kota Baru, Pontianak Selatan, Pontianak" },
+        { "name": "Surabaya", "phone": "+62 81233774583", "address": "Jl. Krukah Tengah No. 73, Surabaya" },
+        { "name": "Balikpapan", "phone": "+62 85321819290", "address": "Ruko Sepinggan Pratama Blok SQ3–11, Jl. Sepinggan Pratama, Sepinggan, Balikpapan Selatan, Balikpapan" },
+        { "name": "Solo", "phone": "+62 81318253224", "address": "Jl. Ahmad Yani 40, The Sunan Hotel (Lobby Hotel Arcade I), 57143, Gilingan, Banjarsari, Surakarta, Central Java 57134" },
+        { "name": "Jambi", "phone": "+62 81320082085", "address": "Alifia Residence Blok E, 05, Kenali Asam Atas, Kota Baru, Jambi" },
+        { "name": "Makassar", "phone": "+62 85299216789", "address": "Komplek Zamrud 2 Blok J No. 14, Jl. Adyaksa Baru, Masale, Panakkukang, Makassar" },
+        { "name": "Banda Aceh", "phone": "+62 811671313", "address": "Jl. Cut Nyan Dhien No. 464, Lamteumen Barat, Jaya Baru, Banda Aceh" },
+        { "name": "Palembang", "phone": "+62 81373795859", "address": "Jl. Basuki Rahmat No. 1674 RT 025 RW 006, Pahlawan, Ilir Timur I, Palembang 30126" },
+        { "name": "Kendari", "phone": "+62 82258674205", "address": "Jl. Sao-Sao, Bende, Kadia, Kendari, Southeast Sulawesi" },
+        { "name": "Bali", "phone": "+62 818135175", "address": "Jl. Wani No. 1 Gerokgak Gede, Desa Delod Peken, Tabanan, Bali" },
+        { "name": "Mataram", "phone": "+62 82341507928", "address": "Jl. Airlangga No. 11x, Gomong, Selaparang, Mataram, West Nusa Tenggara" },
+        { "name": "Batam", "phone": "+62 82367081206", "address": "Komplek Bumi Riau Makmur Blok D No. 14, Jl. Laksamana Bintan, Sungai Panas, Batam" }
+      ],
+      "branches": [
+        {
+          "title": "Head Office",
+          "desc": "North Jakarta"
+        },
+        {
+          "title": "Service Coverage",
+          "desc": "Serving nationwide through partner networks and dedicated support."
+        }
+      ],
+      "history_pill": "Company History",
+      "history_subtitle": "A journey of building fast, secure, and reliable services.",
+      "values_pill": "Company Values",
+      "values_title": "Our Values",
+      "values_subtitle": "The principles that guide every service we deliver",
+      "cta_title": "Ready to Partner With Us?",
+      "cta_desc": "Contact our team for a free consultation and discover the best insurance solution for your business.",
+      "cta_button": "Contact Us Now"
+    },
+    "vision": "Our Vision",
+    "vision_desc": "To be a leading and valuable insurance agency company contributing to improving business security for every partner and associate.",
+    "mission": "Our Mission",
+    "role_title": "Business & Insurance Consultant",
+    "mission_items": {
+      "focus": {
+        "title": "Client Focused",
+        "desc": "Prioritizing client needs and delivering tailored solutions."
+      },
+      "commitment": {
+        "title": "Commitment",
+        "desc": "Delivering professional insurance services to satisfy partners, insured parties, and stakeholders."
+      },
+      "trusted": {
+        "title": "Trusted Partner",
+        "desc": "Building long-term relationships based on trust and integrity."
+      },
+      "consistent": {
+        "title": "Consistent Quality",
+        "desc": "Delivering consistent, high-quality service standards."
+      }
+    },
+    "values": {
+      "title": "Our Core Values",
+      "items": {
+        "integrity": {
+          "title": "Integrity",
+          "desc": "Upholding the highest ethical standards in all our actions."
+        },
+        "innovation": {
+          "title": "Innovation",
+          "desc": "Continuously improving our services with modern solutions."
+        },
+        "excellence": {
+          "title": "Excellence",
+          "desc": "Striving for excellence in every aspect of our business."
+        }
+      }
+    },
+    "legal": {
+      "title": "Legality & Compliance",
+      "subtitle": "We operate with official permits and comply with applicable regulations.",
+      "items": [
+        "Deed of Establishment & AHU Registration",
+        "NIB (Business Identification Number)",
+        "OJK Compliance (as applicable)",
+        "Partnered with licensed insurers and banks"
+      ]
+    },
+    "timeline": {
+      "title": "Our Journey",
+      "items": [
+        {
+          "year": "2023",
+          "title": "Company Established",
+          "desc": "PT. Dwi Kusuma Perkasa was established to support businesses with insurance and risk management solutions."
+        },
+        {
+          "year": "2024",
+          "title": "Service Expansion",
+          "desc": "Expanded Bank Guarantee and Surety Bond services across multiple sectors and regions."
+        },
+        {
+          "year": "2025",
+          "title": "Operational Excellence",
+          "desc": "Strengthened SOP and partner network to deliver faster and more reliable issuance processes."
+        }
+      ]
+    },
+    "cta": "More About Us"
+  },
+  "services": {
+    "title": "Products & Services",
+    "subtitle": "Comprehensive Solutions",
+    "items": {
+      "bank_garansi": {
+        "title": "Bank Guarantee",
+        "desc": "Payment guarantee issued by a bank to support the smooth running of your project."
+      },
+      "surety_bond": {
+        "title": "Surety Bond",
+        "desc": "Three-party guarantee agreement to ensure fulfillment of contractual obligations."
+      },
+      "custom_bond": {
+        "title": "Custom Bond",
+        "desc": "Specialized guarantee solutions tailored to your unique business needs."
+      },
+      "general_insurance": {
+        "title": "General Insurance",
+        "desc": "Comprehensive protection for business assets and operations from various risks."
+      }
+    },
+    "cta": "View All Services",
+    "learn_more": "Learn more",
+    "aria_view_details": "View details for {title}"
+  },
+  "why_choose_us": {
+    "title": "Why Choose Us",
+    "subtitle": "Our Advantages",
+    "items": {
+      "professional": {
+        "title": "Professional & Integrity",
+        "desc": "We uphold high ethical standards and professionalism in every service."
+      },
+      "technology": {
+        "title": "Technology & Innovation",
+        "desc": "Utilizing the latest technology for fast and efficient processes."
+      },
+      "fast_response": {
+        "title": "Fast Response",
+        "desc": "Our team is ready to provide immediate responses and solutions."
+      },
+      "client_satisfaction": {
+        "title": "Client Satisfaction",
+        "desc": "Our top priority is ensuring your satisfaction and peace of mind."
+      }
+    }
+  },
+  "process": {
+    "title": "Consultation Process",
+    "subtitle": "Easy Steps",
+    "bottom_cta": "Start your consultation",
+    "steps": {
+      "1": {
+        "title": "Consultation",
+        "desc": "Discuss your insurance needs with our expert team."
+      },
+      "2": {
+        "title": "Needs Analysis",
+        "desc": "We analyze the specific risks and needs of your business."
+      },
+      "3": {
+        "title": "Quotation",
+        "desc": "We provide the best solution offer with competitive prices."
+      },
+      "4": {
+        "title": "Process & Issuance",
+        "desc": "Fast administrative process until the insurance policy is issued."
+      }
+    }
+  },
+  "partners": {
+    "title": "Our Partners",
+    "subtitle": "Strategic Cooperation",
+    "desc": "We collaborate with leading insurance companies to provide the best service.",
+    "issuing_title": "Insurance & Issuing Banks",
+    "featured_partner_desc": "Credit Insurance Indonesia",
+    "featured_label": "Executive Insurer",
+    "groups": {
+      "insurance_bumn": "State-Owned & Subsidiary Insurers",
+      "insurance_private": "Private Insurers",
+      "bank_government": "Government Banks",
+      "bank_private": "Private Banks"
+    },
+    "categories": {
+      "insurance": "Insurance Partners",
+      "bank": "Bank Partners"
+    },
+    "list": {
+      "insurance": [
+        "Asuransi Jasindo",
+        "Asuransi Sinar Mas",
+        "Asuransi Tugu",
+        "Asuransi Astra Buana",
+        "Asuransi Zurich Indonesia",
+        "Asuransi Tokio Marine",
+        "Asuransi BRI Insurance",
+        "Asuransi Chubb"
+      ],
+      "bank": [
+        "Bank Mandiri",
+        "Bank BRI",
+        "Bank BCA",
+        "Bank BNI",
+        "Bank BTN",
+        "CIMB Niaga",
+        "Bank Danamon",
+        "Bank Permata"
+      ]
+    }
+  },
+  "products": {
+    "title": "Our Products & Services",
+    "subtitle": "Comprehensive insurance and guarantee solutions for your business success.",
+    "features_title": "Key Features",
+    "consult_cta_prefix": "Consult about",
+    "items": {
+      "bg": {
+        "title": "Bank Guarantee",
+        "desc": "A guarantee issued by a bank on behalf of a contractor to fulfill contractual obligations.",
+        "features": ["Bid Bond", "Performance Bond", "Advance Payment Bond", "Maintenance Bond", "Year-End BG"]
+      },
+      "sb": {
+        "title": "Surety Bond",
+        "desc": "A three-party agreement where the surety guarantees to the obligee that the principal will perform.",
+        "features": ["Maintenance Bond", "Payment Bond", "Bid Bond", "Performance Bond", "Advance Payment Bond"]
+      },
+      "cb": {
+        "title": "Custom Bond",
+        "desc": "Guarantees payment of import duties and taxes, facilitating smooth customs clearance.",
+        "features": ["Customs Bond", "KABER", "Vooruitslag", "SPKPBM", "TPS", "Temporary Import (OB 23)"]
+      },
+      "general": {
+        "title": "General Insurance",
+        "desc": "Protection against financial losses resulting from various risks to your business assets.",
+        "features": ["Hull Insurance", "Vehicle Insurance", "Property Insurance", "Third Party Liability", "Marine Cargo"]
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We Are Ready to Help",
+    "page_heading_line1": "GET IN",
+    "page_heading_line2": "TOUCH",
+    "address_label": "Office Address",
+    "address": "Office Tower Fontana Lt. 32 Unit C1 The Mansion Bougenville Jl. Trembesi Blok D, Jakarta Utara 14410",
+    "phone_label": "Phone",
+    "phone": "+62 822-9988-7337",
+    "email_label": "Email",
+    "email": "info@kusumaperkasa.id",
+    "operational_hours": {
+      "label": "Operational Hours",
+      "time": "Monday - Friday, 09:00 - 17:00 WIB"
+    },
+    "form": {
+      "title": "Send us a message",
+      "subtitle": "Tell us what you need and our team will respond shortly.",
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "subject": "Subject",
+      "message": "Your Message",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success_title": "Message sent",
+      "success_desc": "Thank you for reaching out. Our team will contact you soon.",
+      "send_another": "Send another message"
+    },
+    "cta_strip": {
+        "title": "Want Consultation or Need a Quote?",
+        "button": "Contact Us Now"
+    },
+    "download_company_profile": "Download Company Profile"
+    ,
+    "home_strip": {
+      "title_line1": "Need Insurance Solutions?",
+      "title_line2": "Let’s Talk",
+      "subtitle": "Our expert team is ready to provide personalized insurance solutions tailored to your business needs. Contact us today for a free consultation.",
+      "office_label": "Office",
+      "office_value": "Jakarta, Indonesia",
+      "form_title": "Send a message to us",
+      "service_label": "Service Needed",
+      "service_placeholder": "Select a service",
+      "whatsapp_cta": "Chat on WhatsApp"
+    }
+  },
+  "footer": {
+    "company_desc": "Trusted partner for your business insurance and risk management solutions.",
+    "brand_subtitle": "Insurance Services",
+    "about_title": "About",
+    "nav_title": "Navigation",
+    "contact_title": "Contact",
+    "social_title": "Follow Us",
+    "copyright": "© 2024 PT. Dwi Kusuma Perkasa. All rights reserved."
+  }
+}
