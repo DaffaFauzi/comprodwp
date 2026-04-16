@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { useMemo, useState } from 'react'
+import { motion } from 'framer-motion'
 
 function slugify(input: string) {
   return input
@@ -32,13 +33,19 @@ export default function LogoTile({
   )
 
   return (
-    <div className={`group relative overflow-hidden rounded-2xl border border-slate-200 bg-white px-4 shadow-sm shadow-slate-200/60 transition-all hover:-translate-y-0.5 hover:shadow-lg ${className}`}>
+    <motion.div 
+      whileHover={{ 
+        scale: 1.05,
+        boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)"
+      }}
+      className={`group relative overflow-hidden rounded-2xl border border-slate-200 bg-white px-4 shadow-sm shadow-slate-200/60 transition-all duration-300 ${className}`}
+    >
       <div className="absolute inset-x-4 bottom-0 h-[3px] rounded-full bg-transparent transition-colors group-hover:bg-[linear-gradient(90deg,#2F5DAA_0%,#2CA7A4_55%,#F47A2A_100%)]" />
       <div className="h-full w-full flex items-center justify-center">
         {broken ? (
           <div className="text-xs font-black text-slate-700 text-center leading-snug">{name}</div>
         ) : (
-          <div className="relative h-full w-full">
+          <div className="relative h-full w-full pointer-events-none">
             <Image
               src={src}
               alt={name}
@@ -51,7 +58,7 @@ export default function LogoTile({
           </div>
         )}
       </div>
-    </div>
+    </motion.div>
   )
 }
 

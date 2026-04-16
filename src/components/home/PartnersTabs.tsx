@@ -1,7 +1,9 @@
 'use client'
 
-import { useState } from 'react'
-import { motion } from 'framer-motion'
+import { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import PartnerMarquee from '@/components/partners/PartnerMarquee'
+import LogoTile from '@/components/partners/LogoTile'
 
 export default function PartnersTabs({
   insuranceLabel,
@@ -14,8 +16,22 @@ export default function PartnersTabs({
   insurance: string[]
   bank: string[]
 }) {
+  const [mounted, setMounted] = useState(false)
   const [tab, setTab] = useState<'insurance' | 'bank'>('insurance')
+  
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
   const list = tab === 'insurance' ? insurance : bank
+
+  if (!mounted) {
+    return (
+      <div className="min-h-[200px]">
+        {/* Skeleton or empty space to prevent layout shift */}
+      </div>
+    )
+  }
 
   return (
     <div>
@@ -44,23 +60,22 @@ export default function PartnersTabs({
         </button>
       </div>
 
-      <motion.div
-        key={tab}
-        initial={{ opacity: 0, y: 8 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.18 }}
-        className="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4"
-      >
-        {list.slice(0, 12).map((partner) => (
-          <div
-            key={partner}
-            className="h-16 rounded-2xl border border-slate-200 bg-white flex items-center justify-center text-center px-2 shadow-sm shadow-slate-200/50 hover:shadow-md transition-shadow"
-          >
-            <span className="text-xs font-semibold text-slate-700">{partner}</span>
-          </div>
-        ))}
-      </motion.div>
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={tab}
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -8 }}
+          transition={{ duration: 0.2 }}
+          className="mt-8"
+        >
+          <PartnerMarquee
+            items={list}
+            type="text"
+            gradientColor="#f7f8fb"
+          />
+        </motion.div>
+      </AnimatePresence>
     </div>
   )
 }
-

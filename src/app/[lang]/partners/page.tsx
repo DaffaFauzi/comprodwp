@@ -3,6 +3,7 @@ import { getDictionary } from '@/lib/dictionaries'
 import Image from 'next/image'
 import FadeIn from '@/components/FadeIn'
 import LogoTile from '@/components/partners/LogoTile'
+import PartnerMarquee from '@/components/partners/PartnerMarquee'
 
 export const metadata = {
   title: 'Our Partners',
@@ -130,32 +131,20 @@ export default async function PartnersPage({
                 <div className="rounded-[32px] border border-slate-200 bg-slate-50 p-4 shadow-sm shadow-slate-200/50">
                   <div className="text-sm font-semibold text-slate-700 mb-4">{dictionary.partners.groups.insurance_bumn}</div>
                   <div className="overflow-hidden rounded-[28px] bg-white p-4">
-                    <div className="flex gap-4 animate-partner-marquee">
-                      {[...insuranceBumn, ...insuranceBumn].map((partner, index) => (
-                        <LogoTile
-                          key={`${partner.fileName}-${index}`}
-                          name={partner.name}
-                          fileName={partner.fileName}
-                          className="h-28 min-w-[180px] sm:min-w-[220px]"
-                        />
-                      ))}
-                    </div>
+                    <PartnerMarquee
+                      items={insuranceBumn}
+                      type="logo"
+                    />
                   </div>
                 </div>
 
                 <div className="rounded-[32px] border border-slate-200 bg-slate-50 p-4 shadow-sm shadow-slate-200/50">
                   <div className="text-sm font-semibold text-slate-700 mb-4">{dictionary.partners.groups.insurance_private}</div>
                   <div className="overflow-hidden rounded-[28px] bg-white p-4">
-                    <div className="flex gap-4 animate-partner-marquee">
-                      {[...insurancePrivate, ...insurancePrivate].map((partner, index) => (
-                        <LogoTile
-                          key={`${partner.fileName}-${index}`}
-                          name={partner.name}
-                          fileName={partner.fileName}
-                          className="h-28 min-w-[180px] sm:min-w-[220px]"
-                        />
-                      ))}
-                    </div>
+                    <PartnerMarquee
+                      items={insurancePrivate}
+                      type="logo"
+                    />
                   </div>
                 </div>
               </div>
@@ -171,32 +160,20 @@ export default async function PartnersPage({
                 <div className="rounded-[32px] border border-slate-200 bg-slate-50 p-4 shadow-sm shadow-slate-200/50">
                   <div className="text-sm font-semibold text-slate-700 mb-4">{dictionary.partners.groups.bank_government}</div>
                   <div className="overflow-hidden rounded-[28px] bg-white p-4">
-                    <div className="flex gap-4 animate-partner-marquee">
-                      {[...bankGovernment, ...bankGovernment].map((bank, index) => (
-                        <LogoTile
-                          key={`${bank.fileName}-${index}`}
-                          name={bank.name}
-                          fileName={bank.fileName}
-                          className="h-28 min-w-[180px] sm:min-w-[220px]"
-                        />
-                      ))}
-                    </div>
+                    <PartnerMarquee
+                      items={bankGovernment}
+                      type="logo"
+                    />
                   </div>
                 </div>
 
                 <div className="rounded-[32px] border border-slate-200 bg-slate-50 p-4 shadow-sm shadow-slate-200/50">
                   <div className="text-sm font-semibold text-slate-700 mb-4">{dictionary.partners.groups.bank_private}</div>
                   <div className="overflow-hidden rounded-[28px] bg-white p-4">
-                    <div className="flex gap-4 animate-partner-marquee">
-                      {[...bankPrivate, ...bankPrivate].map((bank, index) => (
-                        <LogoTile
-                          key={`${bank.fileName}-${index}`}
-                          name={bank.name}
-                          fileName={bank.fileName}
-                          className="h-28 min-w-[180px] sm:min-w-[220px]"
-                        />
-                      ))}
-                    </div>
+                    <PartnerMarquee
+                      items={bankPrivate}
+                      type="logo"
+                    />
                   </div>
                 </div>
               </div>
