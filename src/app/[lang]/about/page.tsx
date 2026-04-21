@@ -62,8 +62,8 @@ export default async function AboutPage({
 
       <section className="section-y-tight bg-white">
         <div className="container mx-auto px-[var(--layout-page-px)]">
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-stretch">
-            <FadeIn className="h-full" direction="right">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-start">
+            <FadeIn direction="right">
               <VisionCard
                 chipLabel={locale === 'id' ? 'Visi' : dictionary.about.vision}
                 title={dictionary.about.vision}
@@ -75,8 +75,8 @@ export default async function AboutPage({
               />
             </FadeIn>
 
-            <FadeIn className="h-full" direction="left" delay={0.1}>
-              <div className="h-full rounded-[28px] border border-slate-200 bg-white p-7 sm:p-8 shadow-sm shadow-slate-200/60 transition-all hover:shadow-xl hover:shadow-slate-200/70">
+            <FadeIn direction="left" delay={0.1}>
+              <div className="rounded-[28px] border border-slate-200 bg-white p-7 sm:p-8 shadow-sm shadow-slate-200/60 transition-all hover:shadow-xl hover:shadow-slate-200/70">
                 <div className="inline-flex items-center gap-2 rounded-full bg-[#EEF5FF] px-5 py-2 text-sm font-semibold text-dwp-blue">
                   <BadgeCheck className="w-4 h-4" />
                   {locale === 'id' ? 'Misi Perusahaan' : dictionary.about.mission}

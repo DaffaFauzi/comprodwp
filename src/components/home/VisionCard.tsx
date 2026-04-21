@@ -26,7 +26,7 @@ export default function VisionCard({
 
   return (
     <>
-      <div className="h-full rounded-[28px] border border-slate-200 bg-white shadow-sm shadow-slate-200/60 overflow-hidden transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-slate-200/70">
+      <div className="rounded-[28px] border border-slate-200 bg-white shadow-sm shadow-slate-200/60 overflow-hidden transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-slate-200/70">
         <div className="relative h-44 sm:h-52">
           <SafeImage
             src={imageSrc}
