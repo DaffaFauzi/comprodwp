@@ -6,6 +6,8 @@ import Process from '@/components/home/Process'
 import WhyChooseUs from '@/components/home/WhyChooseUs'
 import ContactStrip from '@/components/home/ContactStrip'
 
+export const dynamic = 'force-dynamic'
+
 export default async function Home({
   params,
 }: {
@@ -13,6 +15,7 @@ export default async function Home({
 }) {
   const { lang } = await params
   const locale = lang as Locale
+  await new Promise((resolve) => setTimeout(resolve, 1000))
   
   return (
     <>
