@@ -282,7 +282,7 @@ export function ClientEnhancements({ lang }: { lang: string }) {
         </AnimatePresence>
 
         <a
-          href="https://wa.me/6282299887337"
+          href="https://wa.me/6281288893223"
           className="h-12 w-12 rounded-full bg-[#25D366] text-white shadow-xl shadow-black/15 flex items-center justify-center"
           aria-label="WhatsApp"
         >

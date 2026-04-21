@@ -8,7 +8,7 @@
     "cta_consult": "Consult Now"
   },
   "hero": {
-    "pill": "Trusted Since 2010",
+    "pill": "Trusted Insurance Partner Since 2010",
     "headline": {
       "line1": "Trusted Insurance",
       "line2": {
@@ -32,11 +32,32 @@
       "pill": "About DWP Insurance",
       "pill_prefix": "About DWP",
       "pill_highlight": "Insurance",
-      "desc": "PT. Dwi Kusuma Perkasa (DWP Insurance Services) is a leading insurance broker in Indonesia, specializing in surety bonds, bank guarantees, and comprehensive insurance solutions for businesses of all sizes.",
+      "desc": "PT. Dwi Kusuma Perkasa is a business consulting company specializing in the provision of Bank Guarantees, Surety Bonds, Custom Bonds, and General Insurance services. We are dedicated to helping our partners improve their business performance through innovative and reliable solutions.",
       "cta": "Learn More About Us",
+      "vision_title": "Our Vision",
+      "vision_text": "To become a leading and trusted insurance partner in Indonesia, supported by committed and innovative human resources, helping partners obtain insurance protection and risk management solutions that are fast, easy, effective, and tailored to their needs.",
       "vision_more": "Read more",
       "vision_close": "Close",
+      "mission_title": "Our Mission",
       "mission_intro": "Our commitment to delivering the best service for partners and clients.",
+      "mission_items": {
+        "trusted": {
+          "title": "Trusted",
+          "desc": "Deliver reliable insurance solutions tailored to partner needs"
+        },
+        "consistent": {
+          "title": "Consistency",
+          "desc": "Maintain high-quality service with professional and sustainable standards"
+        },
+        "commitment": {
+          "title": "Commitment",
+          "desc": "Prioritize partner satisfaction through excellent service"
+        },
+        "focus": {
+          "title": "Focus",
+          "desc": "Provide precise and relevant solutions based on client business needs"
+        }
+      },
       "cards": {
         "established": {
           "title": "Established Company",
@@ -57,15 +78,14 @@
       }
     },
     "hero_cards": {
-      "secure_title": "Secure & Trusted",
-      "secure_desc": "Bank guaranteed solutions",
-      "fast_title": "Fast Process",
-      "fast_desc": "Quick approval time",
-      "professional_title": "Professional",
-      "professional_desc": "Expert consultation",
-      "support_value": "24/7",
-      "support_title": "Customer Support",
-      "support_desc": "Always ready to help"
+      "secure_title": "Trusted & Secure Insurance Solutions",
+      "secure_desc": "Your business financial security is our top priority with support from leading insurance partners.",
+      "fast_title": "Fast & Efficient Claim Processing",
+      "fast_desc": "Responsive guarantee issuance and claim processing to support your project continuity.",
+      "professional_title": "Expert Consultation & Risk Assessment",
+      "professional_desc": "Our professional team is ready to provide strategic advice and in-depth risk analysis.",
+      "support_title": "24/7 Dedicated Customer Support",
+      "support_desc": "Customer support services available at all times to answer all your insurance needs."
     },
     "hero_stats": {
       "experience": { "value": "15+", "label": "Years Experience" },
@@ -144,7 +164,7 @@
       "cta_button": "Contact Us Now"
     },
     "vision": "Our Vision",
-    "vision_desc": "To be a leading and valuable insurance agency company contributing to improving business security for every partner and associate.",
+    "vision_desc": "To become a leading and trusted insurance partner in Indonesia, supported by committed and innovative human resources, helping partners obtain insurance protection and risk management solutions that are fast, easy, effective, and tailored to their needs.",
     "mission": "Our Mission",
     "role_title": "Business & Insurance Consultant",
     "mission_items": {
@@ -212,7 +232,12 @@
         }
       ]
     },
-    "cta": "More About Us"
+    "cta": "More About Us",
+    "cta_strip": {
+        "title": "Find the Best Guarantee & Insurance Solutions for Your Business",
+        "desc": "Fast response within 1x24 hours. Our expert team is ready to provide personalized insurance solutions tailored to your business needs.",
+        "button": "Contact Us Now"
+    }
   },
   "services": {
     "title": "Products & Services",
@@ -360,16 +385,16 @@
     "address_label": "Office Address",
     "address": "Office Tower Fontana Lt. 32 Unit C1 The Mansion Bougenville Jl. Trembesi Blok D, Jakarta Utara 14410",
     "phone_label": "Phone",
-    "phone": "+62 822-9988-7337",
+    "phone": "081288893223",
     "email_label": "Email",
-    "email": "info@kusumaperkasa.id",
+    "email": "opsdwikusumaperkasa@gmail.com",
     "operational_hours": {
       "label": "Operational Hours",
       "time": "Monday - Friday, 09:00 - 17:00 WIB"
     },
     "form": {
-      "title": "Send us a message",
-      "subtitle": "Tell us what you need and our team will respond shortly.",
+      "title": "Send a message",
+      "subtitle": "Tell us your needs, our team will respond promptly.",
       "name": "Full Name",
       "email": "Email Address",
       "phone": "Phone Number",
@@ -378,15 +403,13 @@
       "submit": "Send Message",
       "sending": "Sending...",
       "success_title": "Message sent",
-      "success_desc": "Thank you for reaching out. Our team will contact you soon.",
+      "success_desc": "Thank you for contacting us. Our team will get back to you soon.",
       "send_another": "Send another message"
     },
     "cta_strip": {
-        "title": "Want Consultation or Need a Quote?",
-        "button": "Contact Us Now"
+      "title": "Find the Best Guarantee & Insurance Solutions for Your Business"
     },
-    "download_company_profile": "Download Company Profile"
-    ,
+    "download_company_profile": "Download Company Profile",
     "home_strip": {
       "title_line1": "Need Insurance Solutions?",
       "title_line2": "Let’s Talk",

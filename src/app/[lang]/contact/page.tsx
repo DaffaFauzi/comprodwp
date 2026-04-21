@@ -3,6 +3,7 @@ import { getDictionary } from '@/lib/dictionaries'
 import { Clock, Download, Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react'
 import FadeIn from '@/components/FadeIn'
 import ContactForm from '@/components/ContactForm'
+import SafeImage from '@/components/SafeImage'
 
 export const metadata = {
   title: 'Contact Us | PT. Dwi Kusuma Perkasa',
@@ -20,24 +21,37 @@ export default async function ContactPage({
 
   return (
     <div className="bg-white">
-      <section className="relative overflow-hidden section-y-tight">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#F7FAFC] via-white to-white" />
-        <div className="absolute -top-28 -left-28 w-[520px] h-[520px] bg-[rgba(0,229,255,0.08)] rounded-full blur-[140px] pointer-events-none" />
-        <div className="absolute -bottom-28 -right-28 w-[560px] h-[560px] bg-[rgba(244,122,42,0.06)] rounded-full blur-[140px] pointer-events-none" />
-        <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-[0.03]" />
-
+      <section className="relative overflow-hidden pt-16 pb-12 bg-slate-50">
         <div className="container mx-auto px-[var(--layout-page-px)] relative z-10">
-          <FadeIn className="text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center justify-center rounded-full bg-[#EEF5FF] px-6 py-2 text-sm font-semibold text-dwp-blue">
-              {dictionary.contact.subtitle}
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            <div className="w-full lg:w-1/2">
+              <FadeIn>
+                <div className="inline-flex items-center justify-center rounded-full bg-[#EEF5FF] px-6 py-2 text-sm font-semibold text-dwp-blue">
+                  {dictionary.contact.subtitle}
+                </div>
+                <h1 className="mt-8 text-4xl sm:text-5xl lg:text-6xl font-black font-heading tracking-tight text-slate-900 leading-tight">
+                  {dictionary.contact.title}
+                </h1>
+                <p className="mt-5 text-base sm:text-lg text-slate-600 leading-relaxed">
+                  {dictionary.contact.form.subtitle}
+                </p>
+              </FadeIn>
             </div>
-            <h1 className="mt-8 text-4xl sm:text-5xl lg:text-6xl font-black font-heading tracking-tight text-slate-900">
-              {dictionary.contact.title}
-            </h1>
-            <p className="mt-5 text-base sm:text-lg text-slate-600 leading-relaxed">
-              {dictionary.contact.form.subtitle}
-            </p>
-          </FadeIn>
+            <div className="w-full lg:w-1/2">
+              <FadeIn direction="left" delay={0.2}>
+                <div className="relative aspect-[16/9] rounded-[40px] overflow-hidden shadow-2xl shadow-slate-200/60 border border-slate-100 group">
+                  <SafeImage
+                    src="https://images.unsplash.com/photo-1521791136064-7986c29596ad?q=80&w=1200&auto=format&fit=crop"
+                    alt="Customer Support"
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-dwp-blue/10 to-transparent" />
+                </div>
+              </FadeIn>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -114,9 +128,9 @@ export default async function ContactPage({
                       <div className="text-sm font-black text-slate-900">{dictionary.footer.social_title}</div>
                       <div className="mt-4 grid grid-cols-3 gap-4">
                         {[
-                          { label: 'LinkedIn', handle: 'PT. Dwi Kusuma Perkasa', href: 'https://linkedin.com', icon: Linkedin },
+                          { label: 'LinkedIn', handle: 'PT. Dwi Kusuma Perkasa', href: 'https://www.linkedin.com/in/dwi-kusuma-perkasa-191543402/', icon: Linkedin },
                           { label: 'Facebook', handle: 'PT. Dwi Kusuma Perkasa', href: 'https://facebook.com', icon: Facebook },
-                          { label: 'Instagram', handle: '@dwikusumaperkasa', href: 'https://instagram.com', icon: Instagram },
+                          { label: 'Instagram', handle: '@pt.dwikusumaperkasa', href: 'https://www.instagram.com/pt.dwikusumaperkasa', icon: Instagram },
                         ].map((s) => {
                           const Icon = s.icon
                           return (
@@ -149,8 +163,51 @@ export default async function ContactPage({
                 </FadeIn>
 
                 <FadeIn direction="left" delay={0.1}>
-                  <div className="rounded-3xl border border-slate-200 bg-white p-7 sm:p-8 shadow-xl shadow-slate-200/60">
-                    <ContactForm dictionary={dictionary} />
+                  <div className="rounded-3xl border border-slate-200 bg-white overflow-hidden shadow-xl shadow-slate-200/60">
+                    <div className="grid md:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)]">
+                      <div className="relative min-h-[220px] bg-slate-900">
+                        <SafeImage
+                          src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1100&auto=format&fit=crop"
+                          alt={
+                            locale === 'id'
+                              ? 'Tim DWP berdiskusi dengan klien bisnis di ruang meeting'
+                              : 'DWP team discussing with business clients in a meeting room'
+                          }
+                          fill
+                          className="object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-tr from-[#0B1630]/85 via-[#0B1630]/55 to-dwp-teal/60" />
+                        <div className="relative z-10 flex h-full flex-col justify-between p-6 sm:p-8 text-white">
+                          <div>
+                            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/70">
+                              {locale === 'id' ? 'Konsultasi langsung dengan ahli' : 'Direct consultation with experts'}
+                            </p>
+                            <h3 className="mt-3 text-xl sm:text-2xl font-black leading-snug">
+                              {locale === 'id'
+                                ? 'Ceritakan kebutuhan bisnis Anda, kami bantu merancang solusi penjaminan dan asuransi yang tepat.'
+                                : 'Share your business needs and we will design the right bonding and insurance solution.'}
+                            </h3>
+                          </div>
+                          <div className="mt-4 flex flex-wrap gap-3 text-[11px] font-semibold text-white/80">
+                            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 border border-white/15">
+                              <span className="h-2 w-2 rounded-full bg-emerald-300" />
+                              {locale === 'id' ? 'Respon maksimal 1x24 jam' : 'Response within 1x24 hours'}
+                            </div>
+                            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 border border-white/15">
+                              <span className="h-2 w-2 rounded-full bg-sky-300" />
+                              {locale === 'id' ? 'Data dan dokumen dijaga kerahasiaannya' : 'Confidential data and documents'}
+                            </div>
+                            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 border border-white/15">
+                              <span className="h-2 w-2 rounded-full bg-amber-300" />
+                              {locale === 'id' ? 'Prioritas untuk kebutuhan korporasi' : 'Priority for corporate clients'}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="bg-white p-7 sm:p-8">
+                        <ContactForm dictionary={dictionary} />
+                      </div>
+                    </div>
                   </div>
                 </FadeIn>
               </div>

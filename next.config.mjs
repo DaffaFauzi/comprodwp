@@ -6,9 +6,9 @@ const __dirname = path.dirname(__filename)
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  turbopack: {
-    root: __dirname,
+  images: {
+    domains: ['images.unsplash.com'],
   },
-}
+};
 
 export default nextConfig

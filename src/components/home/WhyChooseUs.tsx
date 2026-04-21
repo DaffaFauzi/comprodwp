@@ -2,17 +2,24 @@ import { getDictionary } from '@/lib/dictionaries'
 import { Locale } from '@/i18n-config'
 import { ShieldCheck, Zap, Users, TrendingUp } from 'lucide-react'
 import FadeIn from '@/components/FadeIn'
+import SafeImage from '@/components/SafeImage'
 
 export default async function WhyChooseUs({ lang }: { lang: Locale }) {
   const dictionary = await getDictionary(lang)
 
   const icons = [ShieldCheck, Zap, Users, TrendingUp]
   const items = Object.values(dictionary.why_choose_us.items)
+  const itemImages = [
+    'https://images.unsplash.com/photo-1521791136064-7986c29596ad?q=80&w=800&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=800&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=800&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1525182008055-f88b95ff7980?q=80&w=800&auto=format&fit=crop',
+  ]
   const iconBg = [
-    'bg-[linear-gradient(135deg,#2F5DAA_0%,#2CA7A4_100%)]',
-    'bg-[linear-gradient(135deg,#2CA7A4_0%,#F47A2A_100%)]',
-    'bg-[linear-gradient(135deg,#F47A2A_0%,#4B5CC4_100%)]',
-    'bg-[linear-gradient(135deg,#2CA7A4_0%,#F47A2A_100%)]',
+    'bg-dwp-blue',
+    'bg-dwp-teal',
+    'bg-dwp-orange',
+    'bg-dwp-cyan',
   ]
 
   return (
@@ -22,7 +29,7 @@ export default async function WhyChooseUs({ lang }: { lang: Locale }) {
           <div className="inline-flex items-center justify-center rounded-full bg-[#E6F0FF] border border-[#C7D2FE] px-6 py-2 text-sm font-semibold text-[#1E3A8A]">
             {dictionary.home.different_pill}
           </div>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black font-heading tracking-tight text-slate-900">
+          <h2 className="mt-5 text-2xl sm:text-3xl lg:text-4xl font-black font-heading tracking-tight text-slate-900">
             {dictionary.home.different_title}
           </h2>
           <p className="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed">
@@ -31,27 +38,42 @@ export default async function WhyChooseUs({ lang }: { lang: Locale }) {
           <div className="mt-6 h-[3px] w-24 mx-auto rounded-full bg-gradient-to-r from-dwp-blue to-dwp-teal" />
         </FadeIn>
 
-        <div className="mt-10 grid sm:grid-cols-2 gap-6">
+        <div className="mt-12 grid sm:grid-cols-2 gap-6">
           {items.map((item, i) => {
             const Icon = icons[i % icons.length]
+            const image = itemImages[i % itemImages.length]
+            const iconColor = iconBg[i % iconBg.length]
             return (
               <FadeIn
                 key={item.title}
                 delay={i * 0.05}
-                className="group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm shadow-slate-200/60 transition-all hover:shadow-md hover:-translate-y-0.5"
+                className="group rounded-[28px] border border-slate-200 bg-white shadow-sm shadow-slate-200/60 transition-all hover:shadow-xl hover:shadow-slate-200/60 hover:-translate-y-1 overflow-hidden"
               >
-                <div className="flex items-start gap-5">
-                  <div
-                    className={`w-14 h-14 rounded-2xl ${iconBg[i % iconBg.length]} flex items-center justify-center shrink-0 shadow-[0_14px_28px_rgba(15,23,42,0.10)]`}
-                  >
-                    <Icon className="w-7 h-7 text-white" />
-                  </div>
-                  <div className="min-w-0">
-                    <div className="text-lg font-black text-slate-900">{item.title}</div>
-                    <div className="mt-2 text-sm text-slate-600 leading-relaxed">{item.desc}</div>
+                <div className="relative h-36 w-full">
+                  <SafeImage
+                    src={image}
+                    alt={item.title}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/25 via-slate-900/5 to-transparent" />
+                  <div className="absolute left-5 bottom-5 flex items-center gap-3">
+                    <div
+                      className={`w-11 h-11 rounded-2xl ${iconColor} flex items-center justify-center shadow-[0_14px_28px_rgba(15,23,42,0.18)] ring-4 ring-white/35`}
+                    >
+                      <Icon className="w-5 h-5 text-white" />
+                    </div>
+                    <div className="text-white font-black text-base drop-shadow-sm">
+                      {item.title}
+                    </div>
                   </div>
                 </div>
-                <div className="mt-6 h-[3px] w-full rounded-full bg-transparent group-hover:bg-[linear-gradient(90deg,#2F5DAA_0%,#2CA7A4_55%,#F47A2A_100%)] transition-colors" />
+                <div className="p-6">
+                  <div className="text-sm text-slate-600 leading-relaxed">
+                    {item.desc}
+                  </div>
+                  <div className="mt-6 h-[3px] w-full rounded-full bg-slate-100 group-hover:bg-[linear-gradient(90deg,#2F5DAA_0%,#2CA7A4_55%,#F47A2A_100%)] transition-colors" />
+                </div>
               </FadeIn>
             )
           })}

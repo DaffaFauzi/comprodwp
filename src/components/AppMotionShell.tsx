@@ -100,7 +100,7 @@ export default function AppMotionShell({
             >
               <div className="flex items-center justify-center">
                 <motion.div
-                  className="relative h-16 w-40"
+                  className="relative h-20 w-48"
                   initial={reduceMotion ? { opacity: 1 } : { opacity: 0, scale: 0.92 }}
                   animate={reduceMotion ? { opacity: 1 } : { opacity: 1, scale: 1 }}
                   transition={{ duration: 0.45, ease: EASING }}
@@ -109,7 +109,7 @@ export default function AppMotionShell({
                     src="/logos/dwp.png"
                     alt="DWP"
                     fill
-                    sizes="160px"
+                    sizes="192px"
                     className="object-contain"
                     priority
                   />

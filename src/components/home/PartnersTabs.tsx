@@ -1,9 +1,8 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import PartnerMarquee from '@/components/partners/PartnerMarquee'
-import LogoTile from '@/components/partners/LogoTile'
 
 export default function PartnersTabs({
   insuranceLabel,
@@ -16,25 +15,12 @@ export default function PartnersTabs({
   insurance: string[]
   bank: string[]
 }) {
-  const [mounted, setMounted] = useState(false)
   const [tab, setTab] = useState<'insurance' | 'bank'>('insurance')
-  
-  useEffect(() => {
-    setMounted(true)
-  }, [])
 
   const list = tab === 'insurance' ? insurance : bank
 
-  if (!mounted) {
-    return (
-      <div className="min-h-[200px]">
-        {/* Skeleton or empty space to prevent layout shift */}
-      </div>
-    )
-  }
-
   return (
-    <div>
+    <div className="mt-10 rounded-3xl border border-slate-200 bg-[#f7f8fb] p-6 sm:p-8 shadow-sm shadow-slate-200/60">
       <div className="flex items-center justify-center gap-3">
         <button
           type="button"
@@ -67,7 +53,7 @@ export default function PartnersTabs({
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -8 }}
           transition={{ duration: 0.2 }}
-          className="mt-8"
+          className="mt-8 px-6"
         >
           <PartnerMarquee
             items={list}

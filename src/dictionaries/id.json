@@ -8,7 +8,7 @@
     "cta_consult": "Konsultasi Sekarang"
   },
   "hero": {
-    "pill": "Dipercaya Sejak 2010",
+    "pill": "Mitra Asuransi Terpercaya Sejak 2010",
     "headline": {
       "line1": "Mitra Asuransi",
       "line2": {
@@ -32,11 +32,32 @@
       "pill": "Tentang Asuransi DWP",
       "pill_prefix": "Tentang DWP",
       "pill_highlight": "Asuransi",
-      "desc": "PT. Dwi Kusuma Perkasa (DWP Insurance Services) adalah broker asuransi terkemuka di Indonesia, yang mengkhususkan diri dalam surety bond, jaminan bank, dan solusi asuransi komprehensif untuk bisnis dari semua ukuran.",
+      "desc": "PT. Dwi Kusuma Perkasa adalah perusahaan konsultan bisnis yang mengkhususkan diri dalam penyediaan layanan Bank Garansi, Surety Bond, Custom Bond, dan Asuransi Umum. Kami berdedikasi untuk membantu para mitra meningkatkan kinerja bisnis mereka melalui solusi yang inovatif dan terpercaya.",
       "cta": "Pelajari Lebih Lanjut Tentang Kami",
+      "vision_title": "Visi Kami",
+      "vision_text": "Menjadi mitra asuransi terkemuka dan terpercaya di Indonesia, didukung oleh sumber daya manusia yang berkomitmen dan inovatif, membantu mitra memperoleh perlindungan asuransi dan solusi manajemen risiko yang cepat, mudah, efektif, dan disesuaikan dengan kebutuhan mereka.",
       "vision_more": "Baca selengkapnya",
       "vision_close": "Tutup",
+      "mission_title": "Misi Kami",
       "mission_intro": "Komitmen kami dalam memberikan layanan terbaik untuk mitra dan klien.",
+      "mission_items": {
+        "trusted": {
+          "title": "Terpercaya",
+          "desc": "Memberikan solusi asuransi andal yang disesuaikan dengan kebutuhan mitra"
+        },
+        "consistent": {
+          "title": "Konsistensi",
+          "desc": "Menjaga kualitas layanan yang tinggi dengan standar profesional dan berkelanjutan"
+        },
+        "commitment": {
+          "title": "Komitmen",
+          "desc": "Memprioritaskan kepuasan mitra melalui layanan yang unggul"
+        },
+        "focus": {
+          "title": "Fokus",
+          "desc": "Menyediakan solusi yang tepat dan relevan berdasarkan kebutuhan bisnis klien"
+        }
+      },
       "cards": {
         "established": {
           "title": "Perusahaan yang sudah berdiri",
@@ -57,15 +78,14 @@
       }
     },
     "hero_cards": {
-      "secure_title": "Aman & Terpercaya",
-      "secure_desc": "Solusi penjaminan bank",
-      "fast_title": "Proses Cepat",
-      "fast_desc": "Waktu persetujuan singkat",
-      "professional_title": "Profesional",
-      "professional_desc": "Konsultasi ahli",
-      "support_value": "24/7",
-      "support_title": "Customer Support",
-      "support_desc": "Selalu siap membantu"
+      "secure_title": "Solusi Asuransi Aman & Terpercaya",
+      "secure_desc": "Keamanan finansial bisnis Anda adalah prioritas utama kami dengan dukungan mitra asuransi terkemuka.",
+      "fast_title": "Proses Klaim Cepat & Efisien",
+      "fast_desc": "Layanan penerbitan jaminan dan proses klaim yang responsif untuk mendukung kelancaran proyek Anda.",
+      "professional_title": "Konsultasi Ahli & Penilaian Risiko",
+      "professional_desc": "Tim profesional kami siap memberikan saran strategis dan analisis risiko yang mendalam.",
+      "support_title": "Dukungan Pelanggan Dedikasi 24/7",
+      "support_desc": "Layanan bantuan pelanggan yang siap sedia setiap saat untuk menjawab segala kebutuhan asuransi Anda."
     },
     "hero_stats": {
       "experience": { "value": "15+", "label": "Tahun Pengalaman" },
@@ -144,7 +164,7 @@
       "cta_button": "Hubungi Kami Sekarang"
     },
     "vision": "Visi Kami",
-    "vision_desc": "Menjadi Mitra asuransi yang terkemuka dan terpercaya di Indonesia yang di dukung oleh Sumber Daya Manusia yang berkomitmen penuh dan inovatif untuk membantu para mitra mendapatkan proteksi asuransi dan management resiko dengan cepat, mudah dan sesuai kebutuhan serta tepat guna.",
+    "vision_desc": "Menjadi mitra asuransi terkemuka dan terpercaya di Indonesia, didukung oleh sumber daya manusia yang berkomitmen dan inovatif, untuk membantu mitra memperoleh perlindungan asuransi serta solusi manajemen risiko yang cepat, mudah, efektif, dan tepat guna sesuai kebutuhan.",
     "mission": "Misi Kami",
     "role_title": "Konsultan Bisnis & Asuransi",
     "mission_items": {
@@ -212,7 +232,12 @@
         }
       ]
     },
-    "cta": "Lebih Lanjut Tentang Kami"
+    "cta": "Lebih Lanjut Tentang Kami",
+    "cta_strip": {
+        "title": "Temukan Solusi Penjaminan & Asuransi Terbaik untuk Bisnis Anda",
+        "desc": "Respon cepat dalam 1x24 jam. Tim ahli kami siap memberikan solusi asuransi yang dipersonalisasi dan disesuaikan dengan kebutuhan bisnis Anda.",
+        "button": "Hubungi Kami Sekarang"
+    }
   },
   "services": {
     "title": "Produk & Layanan",
@@ -341,8 +366,8 @@
         "features": ["Jaminan Pemeliharaan", "Jaminan Pembayaran", "Jaminan Penawaran", "Jaminan Pelaksanaan", "Jaminan Uang Muka"]
       },
       "cb": {
-        "title": "Custom Garansi",
-        "desc": "Custom Garansi adalah jaminan pelaksanaan kepabeanan yang diterbitkan oleh perusahaan asuransi atau lembaga penjaminan.",
+        "title": "Custom Bond",
+        "desc": "Custom Bond adalah jaminan pelaksanaan kepabeanan yang diterbitkan oleh perusahaan asuransi atau lembaga penjaminan untuk memastikan pemenuhan kewajiban pabean Anda secara efektif.",
         "features": ["LAYANG-LAYANG", "KABER", "Vooruitslag", "SPKPBM", "TPS", "Impor Sementara (OB 23)"]
       },
       "general": {
@@ -360,9 +385,9 @@
     "address_label": "Alamat Kantor",
     "address": "Office Tower Fontana Lt. 32 Unit C1 The Mansion Bougenville Jl. Trembesi Blok D, Jakarta Utara 14410",
     "phone_label": "Telepon",
-    "phone": "+62 822-9988-7337",
+    "phone": "081288893223",
     "email_label": "Email",
-    "email": "info@kusumaperkasa.id",
+    "email": "opsdwikusumaperkasa@gmail.com",
     "operational_hours": {
       "label": "Jam Operasional",
       "time": "Senin - Jumat, 09:00 - 17:00 WIB"
@@ -382,11 +407,9 @@
       "send_another": "Kirim pesan lagi"
     },
     "cta_strip": {
-        "title": "Ingin Konsultasi atau Butuh Penawaran?",
-        "button": "Hubungi Kami Sekarang"
+      "title": "Temukan Solusi Penjaminan & Asuransi Terbaik untuk Bisnis Anda"
     },
-    "download_company_profile": "Unduh Company Profile"
-    ,
+    "download_company_profile": "Unduh Company Profile",
     "home_strip": {
       "title_line1": "Butuh Solusi Asuransi?",
       "title_line2": "Mari Kita Bicara",

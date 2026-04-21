@@ -1,23 +1,20 @@
 'use client'
 
-import { useRef, useEffect, useCallback, ReactNode, useState } from 'react'
-import { motion } from 'framer-motion'
+import { useRef, useEffect, useCallback, ReactNode } from 'react'
 
-interface PartnerMarqueeProps {
-  items: any[]
-  renderItem: (item: any, index: number) => ReactNode
+interface PartnerMarqueeProps<T> {
+  items: T[]
+  renderItem: (item: T, index: number) => ReactNode
   speed?: number
   gradientColor?: string
 }
 
-export default function PartnerMarquee({ 
+export default function PartnerMarquee<T>({ 
   items, 
   renderItem, 
   speed = 0.8,
   gradientColor = 'white'
-}: PartnerMarqueeProps) {
-  const [mounted, setMounted] = useState(false)
-  
+}: PartnerMarqueeProps<T>) {
   // Triple the items for seamless infinite scroll
   const displayList = [...items, ...items, ...items]
   
@@ -33,11 +30,7 @@ export default function PartnerMarquee({
   const resumeTimeout = useRef<NodeJS.Timeout | null>(null)
   const requestRef = useRef<number | null>(null)
 
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  const animate = useCallback(() => {
+  const step = useCallback(() => {
     if (!containerRef.current) return
     const container = containerRef.current
     const singleSetWidth = container.scrollWidth / 3
@@ -56,31 +49,30 @@ export default function PartnerMarquee({
         container.scrollLeft += singleSetWidth
       }
     }
-
-    requestRef.current = requestAnimationFrame(animate)
   }, [speed])
 
   useEffect(() => {
-    if (!mounted) return
-    requestRef.current = requestAnimationFrame(animate)
+    const loop = () => {
+      step()
+      requestRef.current = requestAnimationFrame(loop)
+    }
+    requestRef.current = requestAnimationFrame(loop)
     return () => {
       if (requestRef.current) cancelAnimationFrame(requestRef.current)
       if (resumeTimeout.current) clearTimeout(resumeTimeout.current)
     }
-  }, [animate, mounted])
+  }, [step])
 
   useEffect(() => {
-    if (mounted && containerRef.current) {
-      const container = containerRef.current
-      const timer = setTimeout(() => {
-        container.scrollLeft = container.scrollWidth / 3
-      }, 50)
-      return () => clearTimeout(timer)
-    }
-  }, [items, mounted])
+    if (!containerRef.current) return
+    const container = containerRef.current
+    const timer = setTimeout(() => {
+      container.scrollLeft = container.scrollWidth / 3
+    }, 50)
+    return () => clearTimeout(timer)
+  }, [items])
 
   const handleStart = (pageX: number) => {
-    if (!mounted) return
     isDragging.current = true
     autoScrollPaused.current = true
     if (resumeTimeout.current) clearTimeout(resumeTimeout.current)
@@ -93,7 +85,7 @@ export default function PartnerMarquee({
   }
 
   const handleMove = (pageX: number) => {
-    if (!isDragging.current || !containerRef.current || !mounted) return
+    if (!isDragging.current || !containerRef.current) return
     const x = pageX - containerRef.current.offsetLeft
     const walk = (x - startX.current)
     containerRef.current.scrollLeft = scrollLeftStart.current - walk
@@ -108,21 +100,13 @@ export default function PartnerMarquee({
   }
 
   const handleEnd = () => {
-    if (!isDragging.current || !mounted) return
+    if (!isDragging.current) return
     isDragging.current = false
     
     if (resumeTimeout.current) clearTimeout(resumeTimeout.current)
     resumeTimeout.current = setTimeout(() => {
       autoScrollPaused.current = false
     }, 1500)
-  }
-
-  if (!mounted) {
-    return (
-      <div className="relative overflow-hidden h-24" style={{ backgroundColor: gradientColor }}>
-        {/* Placeholder to maintain layout during hydration */}
-      </div>
-    )
   }
 
   const gradientStyle = {

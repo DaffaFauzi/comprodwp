@@ -35,7 +35,7 @@ export default async function Services({ lang }: { lang: Locale }) {
   ]
 
   return (
-    <section className="bg-white section-y relative overflow-hidden">
+    <section className="bg-[#F7FAFC] section-y relative overflow-hidden">
       <div className="absolute top-0 right-0 w-[720px] h-[720px] bg-dwp-orange/5 rounded-full blur-[140px] -translate-y-1/2 translate-x-1/2 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[720px] h-[720px] bg-dwp-cyan/5 rounded-full blur-[140px] translate-y-1/2 -translate-x-1/2 pointer-events-none" />
 

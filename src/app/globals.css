@@ -28,8 +28,8 @@
   --header-min-h: 56px;
   --nav-gap: 18px;
 
-  --section-py: 56px;
-  --section-py-tight: 40px;
+  --section-py: 64px;
+  --section-py-tight: 48px;
 }
 
 html {
@@ -57,8 +57,8 @@ html[data-theme="dark"] {
     --header-py: 16px;
     --header-min-h: 64px;
     --nav-gap: 24px;
-    --section-py: 72px;
-    --section-py-tight: 56px;
+    --section-py: 80px;
+    --section-py-tight: 64px;
   }
 }
 
@@ -68,8 +68,8 @@ html[data-theme="dark"] {
     --header-py: 20px;
     --header-min-h: 72px;
     --nav-gap: 28px;
-    --section-py: 88px;
-    --section-py-tight: 72px;
+    --section-py: 96px;
+    --section-py-tight: 80px;
   }
 }
 

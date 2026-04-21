@@ -1,10 +1,13 @@
 'use client'
 
-import { useRef, useEffect, useCallback, useState } from 'react'
+import { useRef, useEffect, useCallback } from 'react'
 import LogoTile from './LogoTile'
 
+type LogoItem = { name: string; fileName: string }
+type PartnerItem = string | LogoItem
+
 interface PartnerMarqueeProps {
-  items: any[]
+  items: PartnerItem[]
   type?: 'logo' | 'text'
   speed?: number
   gradientColor?: string
@@ -16,8 +19,6 @@ export default function PartnerMarquee({
   speed = 0.8,
   gradientColor = 'white'
 }: PartnerMarqueeProps) {
-  const [mounted, setMounted] = useState(false)
-  
   // Triple the items for seamless infinite scroll
   const displayList = [...items, ...items, ...items]
   
@@ -33,11 +34,7 @@ export default function PartnerMarquee({
   const resumeTimeout = useRef<NodeJS.Timeout | null>(null)
   const requestRef = useRef<number | null>(null)
 
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  const animate = useCallback(() => {
+  const step = useCallback(() => {
     if (!containerRef.current) return
     const container = containerRef.current
     const singleSetWidth = container.scrollWidth / 3
@@ -56,31 +53,30 @@ export default function PartnerMarquee({
         container.scrollLeft += singleSetWidth
       }
     }
-
-    requestRef.current = requestAnimationFrame(animate)
   }, [speed])
 
   useEffect(() => {
-    if (!mounted) return
-    requestRef.current = requestAnimationFrame(animate)
+    const loop = () => {
+      step()
+      requestRef.current = requestAnimationFrame(loop)
+    }
+    requestRef.current = requestAnimationFrame(loop)
     return () => {
       if (requestRef.current) cancelAnimationFrame(requestRef.current)
       if (resumeTimeout.current) clearTimeout(resumeTimeout.current)
     }
-  }, [animate, mounted])
+  }, [step])
 
   useEffect(() => {
-    if (mounted && containerRef.current) {
-      const container = containerRef.current
-      const timer = setTimeout(() => {
-        container.scrollLeft = container.scrollWidth / 3
-      }, 50)
-      return () => clearTimeout(timer)
-    }
-  }, [items, mounted])
+    if (!containerRef.current) return
+    const container = containerRef.current
+    const timer = setTimeout(() => {
+      container.scrollLeft = container.scrollWidth / 3
+    }, 50)
+    return () => clearTimeout(timer)
+  }, [items])
 
   const handleStart = (pageX: number) => {
-    if (!mounted) return
     isDragging.current = true
     autoScrollPaused.current = true
     if (resumeTimeout.current) clearTimeout(resumeTimeout.current)
@@ -93,7 +89,7 @@ export default function PartnerMarquee({
   }
 
   const handleMove = (pageX: number) => {
-    if (!isDragging.current || !containerRef.current || !mounted) return
+    if (!isDragging.current || !containerRef.current) return
     const x = pageX - containerRef.current.offsetLeft
     const walk = (x - startX.current)
     containerRef.current.scrollLeft = scrollLeftStart.current - walk
@@ -108,20 +104,13 @@ export default function PartnerMarquee({
   }
 
   const handleEnd = () => {
-    if (!isDragging.current || !mounted) return
+    if (!isDragging.current) return
     isDragging.current = false
     
     if (resumeTimeout.current) clearTimeout(resumeTimeout.current)
     resumeTimeout.current = setTimeout(() => {
       autoScrollPaused.current = false
     }, 1500)
-  }
-
-  if (!mounted) {
-    return (
-      <div className="relative overflow-hidden h-24" style={{ backgroundColor: gradientColor }}>
-      </div>
-    )
   }
 
   const gradientStyle = {
@@ -150,17 +139,25 @@ export default function PartnerMarquee({
         {displayList.map((item, index) => (
           <div key={`${index}`} className="flex-shrink-0">
             {type === 'logo' ? (
-              <LogoTile
-                name={item.name}
-                fileName={item.fileName}
-                className="h-28 min-w-[180px] sm:min-w-[220px]"
-              />
+              typeof item === 'string' ? (
+                <div className="w-40 h-16 rounded-2xl border border-slate-200 bg-white flex items-center justify-center text-center px-4 shadow-sm shadow-slate-200/50 transition-all duration-300">
+                  <span className="text-xs font-semibold text-slate-700 pointer-events-none">
+                    {item}
+                  </span>
+                </div>
+              ) : (
+                <LogoTile
+                  name={item.name}
+                  fileName={item.fileName}
+                  className="h-28 min-w-[180px] sm:min-w-[220px]"
+                />
+              )
             ) : (
               <div
                 className="w-40 h-16 rounded-2xl border border-slate-200 bg-white flex items-center justify-center text-center px-4 shadow-sm shadow-slate-200/50 transition-all duration-300"
               >
                 <span className="text-xs font-semibold text-slate-700 pointer-events-none">
-                  {item}
+                  {typeof item === 'string' ? item : item.name}
                 </span>
               </div>
             )}

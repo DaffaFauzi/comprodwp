@@ -12,10 +12,8 @@ export default async function Header({ lang }: { lang: Locale }) {
     <header className="w-full sticky top-0 z-50">
       <div className="bg-white/85 backdrop-blur-xl border-b border-slate-200 shadow-sm shadow-slate-200/40 supports-[backdrop-filter]:bg-white/70">
         <div className="container mx-auto px-[var(--layout-page-px)] min-h-[var(--header-min-h)] py-[var(--header-py)] flex items-center justify-between gap-6">
-          <Link href={`/${lang}`} className="flex items-center gap-3">
-            <div className="w-11 h-11 rounded-xl bg-white border border-slate-200 flex items-center justify-center overflow-hidden shadow-sm shadow-slate-200/60">
-              <Image src="/logos/dwp.png" alt="DWP" width={36} height={16} className="object-contain" />
-            </div>
+          <Link href={`/${lang}`} className="flex items-center transition-transform hover:scale-105">
+            <Image src="/logos/dwp.png" alt="DWP" width={80} height={36} className="object-contain w-auto h-12" priority />
           </Link>
           
           <nav className="hidden md:flex items-center gap-[var(--nav-gap)] text-sm font-semibold text-slate-800">

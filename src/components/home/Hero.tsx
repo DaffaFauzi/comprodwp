@@ -1,11 +1,35 @@
 import Link from 'next/link'
 import { getDictionary } from '@/lib/dictionaries'
 import { Locale } from '@/i18n-config'
-import { ArrowRight, BadgeCheck, ShieldCheck, TrendingUp } from 'lucide-react'
+import { ArrowRight, ShieldCheck } from 'lucide-react'
 import FadeIn from '@/components/FadeIn'
+import SafeImage from '@/components/SafeImage'
 
 export default async function Hero({ lang }: { lang: Locale }) {
   const dictionary = await getDictionary(lang)
+
+  const featureCards = [
+    {
+      title: dictionary.home.hero_cards.secure_title,
+      desc: dictionary.home.hero_cards.secure_desc,
+      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop', // Blue building
+    },
+    {
+      title: dictionary.home.hero_cards.fast_title,
+      desc: dictionary.home.hero_cards.fast_desc,
+      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800&auto=format&fit=crop', // Team meeting
+    },
+    {
+      title: dictionary.home.hero_cards.professional_title,
+      desc: dictionary.home.hero_cards.professional_desc,
+      image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop', // Professional team
+    },
+    {
+      title: dictionary.home.hero_cards.support_title,
+      desc: dictionary.home.hero_cards.support_desc,
+      image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop', // Customer support
+    },
+  ]
 
   return (
     <section data-testid="hero" className="relative overflow-hidden bg-white">
@@ -15,19 +39,19 @@ export default async function Hero({ lang }: { lang: Locale }) {
       <div className="absolute -bottom-28 -right-24 w-[560px] h-[560px] bg-[rgba(244,122,42,0.10)] rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-[0.045]" />
       
-      <div className="container mx-auto px-[var(--layout-page-px)] relative z-10 py-12 md:py-16 lg:py-20">
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+      <div className="container mx-auto px-[var(--layout-page-px)] relative z-10 pt-4 pb-16 md:pt-8 md:pb-20 lg:pt-10 lg:pb-24">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
           
           {/* Left Content */}
-          <FadeIn className="flex flex-col space-y-8 max-w-2xl" direction="right">
+          <FadeIn className="flex flex-col space-y-6 max-w-2xl" direction="right">
             
-            <div className="inline-flex items-center self-start gap-2 rounded-full bg-white border border-slate-200 px-4 py-2 shadow-sm shadow-slate-200/60 text-sm font-semibold text-slate-700">
-              <span className="h-2 w-2 rounded-full bg-dwp-teal" />
+            <div className="inline-flex items-center self-start gap-2.5 rounded-full bg-dwp-blue/5 border border-dwp-blue/10 px-4 py-2 shadow-sm shadow-dwp-blue/5 text-sm font-bold text-dwp-blue transition-colors hover:bg-dwp-blue/10">
+              <ShieldCheck className="w-4 h-4" />
               <span>{dictionary.hero.pill}</span>
             </div>
 
             {/* Headings */}
-            <div className="space-y-6">
+            <div className="space-y-4">
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black font-heading tracking-tight text-slate-900 leading-[1.03]">
                 <span className="block">{dictionary.hero.headline.line1}</span>
                 <span className="block">
@@ -43,10 +67,10 @@ export default async function Hero({ lang }: { lang: Locale }) {
             </div>
 
             {/* Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-2">
+            <div className="flex flex-col sm:flex-row gap-4 pt-1">
               <Link
                 href={`/${lang}/contact`}
-                className="inline-flex h-12 sm:h-14 items-center justify-center rounded-2xl bg-[#2F5DAA] px-7 sm:px-10 text-base font-black text-white shadow-[0_18px_40px_rgba(47,93,170,0.25)] transition-all hover:shadow-[0_22px_46px_rgba(47,93,170,0.30)] hover:-translate-y-0.5 active:translate-y-0"
+                className="inline-flex h-12 sm:h-14 items-center justify-center rounded-full bg-[linear-gradient(90deg,#2F5DAA_0%,#2CA7A4_100%)] px-7 sm:px-10 text-base font-black text-white shadow-[0_18px_40px_rgba(47,93,170,0.22)] transition-all hover:shadow-[0_22px_46px_rgba(47,93,170,0.28)] hover:-translate-y-0.5 active:translate-y-0"
               >
                 {dictionary.hero.cta_primary}
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -59,7 +83,7 @@ export default async function Hero({ lang }: { lang: Locale }) {
               </Link>
             </div>
 
-            <div className="pt-6">
+            <div className="pt-4">
               <div className="grid grid-cols-3 gap-10 max-w-xl">
                 {Object.values(dictionary.home.hero_stats).map((s, idx) => (
                   <div key={s.label}>
@@ -77,42 +101,32 @@ export default async function Hero({ lang }: { lang: Locale }) {
             </div>
           </FadeIn>
 
-          {/* Right Content - Visual */}
-          <FadeIn className="relative" direction="left" delay={0.2}>
-            <div data-testid="hero-cards" className="relative aspect-[4/3]">
-              <div className="hero-float-a absolute left-6 top-8 w-[42%] rounded-[22px] bg-white px-5 py-5 shadow-[0_18px_44px_rgba(15,23,42,0.16)]">
-                <div className="h-12 w-12 rounded-2xl bg-[#2CA7A4] flex items-center justify-center text-white mb-4">
-                  <ShieldCheck className="w-6 h-6" />
-                </div>
-                <div className="text-xl font-black text-slate-900">{dictionary.home.hero_cards.secure_title}</div>
-                <div className="mt-2 text-sm text-slate-500">{dictionary.home.hero_cards.secure_desc}</div>
-              </div>
-
-              <div className="hero-float-b absolute right-6 top-8 w-[42%] rounded-[22px] bg-white px-5 py-5 shadow-[0_18px_44px_rgba(15,23,42,0.16)]">
-                <div className="h-12 w-12 rounded-2xl bg-[linear-gradient(135deg,#2CA7A4_0%,#F47A2A_100%)] flex items-center justify-center text-white mb-4">
-                  <TrendingUp className="w-6 h-6" />
-                </div>
-                <div className="text-xl font-black text-slate-900">{dictionary.home.hero_cards.fast_title}</div>
-                <div className="mt-2 text-sm text-slate-500">{dictionary.home.hero_cards.fast_desc}</div>
-              </div>
-
-              <div className="hero-float-b absolute left-6 bottom-10 w-[42%] rounded-[22px] bg-white px-5 py-5 shadow-[0_18px_44px_rgba(15,23,42,0.16)]">
-                <div className="h-12 w-12 rounded-2xl bg-[linear-gradient(135deg,#F47A2A_0%,#2F5DAA_100%)] flex items-center justify-center text-white mb-4">
-                  <BadgeCheck className="w-6 h-6" />
-                </div>
-                <div className="text-xl font-black text-slate-900">{dictionary.home.hero_cards.professional_title}</div>
-                <div className="mt-2 text-sm text-slate-500">{dictionary.home.hero_cards.professional_desc}</div>
-              </div>
-
-              <div className="hero-float-a absolute right-6 bottom-10 w-[42%] rounded-[22px] bg-white px-5 py-5 shadow-[0_18px_44px_rgba(15,23,42,0.16)]">
-                <div className="h-12 w-12 rounded-2xl bg-[#2F5DAA] flex items-center justify-center text-white mb-4">
-                  <BadgeCheck className="w-6 h-6" />
-                </div>
-                <div className="text-xl font-black text-slate-900 leading-none">{dictionary.home.hero_cards.support_title}</div>
-                <div className="mt-2 text-sm text-slate-500">{dictionary.home.hero_cards.support_desc}</div>
-              </div>
-            </div>
-          </FadeIn>
+          {/* Right Content - Visual Grid */}
+          <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {featureCards.map((card, index) => {
+              return (
+                <FadeIn key={card.title} delay={0.1 * index} direction="up" className="h-full">
+                  <div className="group relative h-full overflow-hidden rounded-[24px] border border-slate-200 bg-white p-5 shadow-sm shadow-slate-200/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-200/60">
+                    <div className="relative h-40 w-full overflow-hidden rounded-xl mb-5">
+                      <SafeImage 
+                        src={card.image} 
+                        alt={card.title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent transition-opacity group-hover:opacity-0" />
+                    </div>
+                    <h3 className="text-lg font-black text-slate-900 leading-tight group-hover:text-dwp-blue transition-colors">
+                      {card.title}
+                    </h3>
+                    <p className="mt-3 text-sm text-slate-600 leading-relaxed">
+                      {card.desc}
+                    </p>
+                  </div>
+                </FadeIn>
+              )
+            })}
+          </div>
 
         </div>
       </div>
