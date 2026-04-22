@@ -98,7 +98,6 @@ export function ClientEnhancements({ lang }: { lang: string }) {
       (Math.random() < 0.5 ? 'a' : 'b')
 
     window.localStorage.setItem(storageKey, variant)
-    document.documentElement.dataset.ab = variant
 
     const metricsKey = `ab-metrics:${variant}`
     const startedAt = Date.now()
@@ -143,6 +142,19 @@ export function ClientEnhancements({ lang }: { lang: string }) {
       onUnload()
       window.removeEventListener('click', onClick, true)
       window.removeEventListener('beforeunload', onUnload)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (typeof document === 'undefined') return
+    const attrs = [
+      document.documentElement?.getAttribute('inmaintabuse'),
+      document.body?.getAttribute('inmaintabuse'),
+    ]
+    if (attrs.some((v) => v != null)) {
+      console.warn(
+        '[hydration] Unexpected attribute detected: inmaintabuse. This is typically injected by a browser extension or external script, not React.'
+      )
     }
   }, [])
 

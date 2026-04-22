@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { ArrowRight, Check } from 'lucide-react'
 import FadeIn from '@/components/FadeIn'
 import SafeImage from '@/components/SafeImage'
+import SectionHeader from '@/components/SectionHeader'
 
 export const metadata = {
   title: 'Products & Services | PT. Dwi Kusuma Perkasa',
@@ -46,20 +47,11 @@ export default async function ProductsPage({
 
   return (
     <div className="bg-white">
-      {/* Header Section */}
-      <section className="pt-16 pb-12 bg-slate-50">
-        <div className="container mx-auto px-[var(--layout-page-px)]">
-          <div className="text-center max-w-3xl mx-auto">
-            <FadeIn>
-              <p className="text-sm font-bold uppercase tracking-[0.3em] text-dwp-blue mb-4">{dictionary.home.our_services_badge}</p>
-              <h1 className="text-4xl md:text-5xl font-black text-slate-900 mb-6">{dictionary.products.title}</h1>
-              <p className="text-lg text-slate-600 leading-relaxed">
-                {dictionary.products.subtitle}
-              </p>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
+      <SectionHeader
+        badge={dictionary.home.our_services_badge}
+        title={dictionary.products.title}
+        subtitle={dictionary.products.subtitle}
+      />
 
       {/* Products Sections */}
       <div className="overflow-hidden">

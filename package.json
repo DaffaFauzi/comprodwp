@@ -15,6 +15,7 @@
     "@formatjs/intl-localematcher": "^0.8.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.35.0",
+    "lottie-react": "^2.4.1",
     "lucide-react": "^0.577.0",
     "negotiator": "^1.0.0",
     "next": "16.1.6",
@@ -24,8 +25,8 @@
     "tailwind-merge": "^3.5.0"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
     "@playwright/test": "^1.55.0",
+    "@tailwindcss/postcss": "^4",
     "@types/negotiator": "^0.6.4",
     "@types/node": "^20",
     "@types/react": "^19",

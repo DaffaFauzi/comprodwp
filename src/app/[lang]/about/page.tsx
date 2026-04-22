@@ -1,10 +1,10 @@
 import { Locale } from '@/i18n-config'
 import { getDictionary } from '@/lib/dictionaries'
 import Link from 'next/link'
-import { ArrowLeft, BadgeCheck, Focus, HeartHandshake, Sparkles, Target } from 'lucide-react'
+import { BadgeCheck, Focus, HeartHandshake, Sparkles, Target } from 'lucide-react'
 import FadeIn from '@/components/FadeIn'
 import VisionCard from '@/components/home/VisionCard'
-import SafeImage from '@/components/SafeImage'
+import SectionHeader from '@/components/SectionHeader'
 
 export const metadata = {
   title: 'About Us | PT. Dwi Kusuma Perkasa',
@@ -22,43 +22,11 @@ export default async function AboutPage({
 
   return (
     <div className="bg-white">
-      <section className="relative overflow-hidden pt-16 pb-12 bg-slate-50">
-        <div className="container mx-auto px-[var(--layout-page-px)] relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
-            <div className="w-full lg:w-1/2">
-              <Link href={`/${lang}`} className="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors mb-8">
-                <ArrowLeft className="w-4 h-4" />
-                {dictionary.about.page.back_home}
-              </Link>
-              <FadeIn>
-                <div className="inline-flex items-center justify-center rounded-full bg-[#EEF5FF] px-6 py-2 text-sm font-semibold text-dwp-blue">
-                  {dictionary.about.page.pill}
-                </div>
-                <h1 className="mt-8 text-4xl sm:text-5xl lg:text-6xl font-black font-heading tracking-tight text-slate-900 leading-tight">
-                  {dictionary.about.page.title}
-                </h1>
-                <p className="mt-5 text-base sm:text-lg text-slate-600 leading-relaxed">
-                  {dictionary.about.page.lead}
-                </p>
-              </FadeIn>
-            </div>
-            <div className="w-full lg:w-1/2">
-              <FadeIn direction="left" delay={0.2}>
-                <div className="relative aspect-[4/3] rounded-[40px] overflow-hidden shadow-2xl shadow-slate-200/60 border border-slate-100 group">
-                  <SafeImage
-                    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop"
-                    alt="PT. Dwi Kusuma Perkasa Office"
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    priority
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-tr from-dwp-blue/10 to-transparent" />
-                </div>
-              </FadeIn>
-            </div>
-          </div>
-        </div>
-      </section>
+      <SectionHeader
+        badge={dictionary.about.page.pill}
+        title={dictionary.about.page.title}
+        subtitle={dictionary.about.page.lead}
+      />
 
       <section className="section-y-tight bg-white">
         <div className="container mx-auto px-[var(--layout-page-px)]">

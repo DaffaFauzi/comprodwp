@@ -20,7 +20,7 @@
     },
     "badge": "Mitra Asuransi Terpercaya",
     "title": "Mitra Asuransi Terpercaya untuk Bisnis Anda",
-    "subtitle": "Layanan surety bond dan bank garansi profesional yang disesuaikan dengan kebutuhan bisnis Anda. Cepat, andal, dan dipercaya oleh perusahaan terkemuka di Indonesia.",
+    "subtitle": "Surety bond & bank garansi cepat, aman, dan sesuai kebutuhan bisnis Anda.",
     "cta_primary": "Konsultasi Sekarang",
     "cta_secondary": "Layanan Kami",
     "trusted_by": "Dipercaya oleh perusahaan terkemuka"
@@ -78,17 +78,17 @@
       }
     },
     "hero_cards": {
-      "secure_title": "Solusi Asuransi Aman & Terpercaya",
-      "secure_desc": "Keamanan finansial bisnis Anda adalah prioritas utama kami dengan dukungan mitra asuransi terkemuka.",
-      "fast_title": "Proses Klaim Cepat & Efisien",
-      "fast_desc": "Layanan penerbitan jaminan dan proses klaim yang responsif untuk mendukung kelancaran proyek Anda.",
-      "professional_title": "Konsultasi Ahli & Penilaian Risiko",
-      "professional_desc": "Tim profesional kami siap memberikan saran strategis dan analisis risiko yang mendalam.",
-      "support_title": "Dukungan Pelanggan Dedikasi 24/7",
-      "support_desc": "Layanan bantuan pelanggan yang siap sedia setiap saat untuk menjawab segala kebutuhan asuransi Anda."
+      "secure_title": "Aman & Terpercaya",
+      "secure_desc": "Didukung mitra berizin untuk menjaga kelancaran bisnis.",
+      "fast_title": "Proses Cepat",
+      "fast_desc": "Alur jelas dan responsif dari pengajuan hingga terbit.",
+      "professional_title": "Konsultasi Ahli",
+      "professional_desc": "Arahan tepat dari tim berpengalaman sesuai kebutuhan.",
+      "support_title": "Support 24/7",
+      "support_desc": "Bantuan dan update cepat kapan pun dibutuhkan."
     },
     "hero_stats": {
-      "experience": { "value": "15+", "label": "Tahun Pengalaman" },
+      "experience": { "value": "4+", "label": "Tahun Pengalaman" },
       "clients": { "value": "500+", "label": "Klien Terlayani" },
       "satisfaction": { "value": "98%", "label": "Kepuasan" }
     },

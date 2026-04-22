@@ -43,8 +43,8 @@ export default async function RootLayout({
   const { lang } = await params
   
   return (
-    <html lang={lang} className={`scroll-smooth ${inter.variable} ${poppins.variable}`}>
-      <body className="min-h-screen flex flex-col antialiased font-sans">
+    <html suppressHydrationWarning lang={lang} className={`scroll-smooth ${inter.variable} ${poppins.variable}`}>
+      <body suppressHydrationWarning className="min-h-screen flex flex-col antialiased font-sans">
         <Header lang={lang as Locale} />
         <main className="flex-1">
           <AppMotionShell lang={lang}>{children}</AppMotionShell>

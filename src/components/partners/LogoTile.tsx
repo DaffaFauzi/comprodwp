@@ -38,13 +38,13 @@ export default function LogoTile({
         scale: 1.05,
         boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)"
       }}
-      className={`relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-4 sm:p-5 shadow-sm shadow-slate-200/60 transition-all duration-300 flex items-center justify-center ${className}`}
+      className={`relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-4 shadow-sm shadow-slate-200/60 transition-all duration-300 flex items-center justify-center ${className}`}
     >
       <div className="w-full flex items-center justify-center">
         {broken ? (
           <div className="px-2 text-xs font-black text-slate-700 text-center leading-snug">{name}</div>
         ) : (
-          <div className="relative w-full h-14 sm:h-16 pointer-events-none">
+          <div className="relative w-[92%] h-20 pointer-events-none">
             <Image
               src={src}
               alt={name}

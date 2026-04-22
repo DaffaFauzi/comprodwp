@@ -2,7 +2,6 @@ import { Locale } from '@/i18n-config'
 import { getDictionary } from '@/lib/dictionaries'
 import Image from 'next/image'
 import FadeIn from '@/components/FadeIn'
-import LogoTile from '@/components/partners/LogoTile'
 import PartnerMarquee from '@/components/partners/PartnerMarquee'
 
 export const metadata = {
@@ -61,7 +60,7 @@ export default async function PartnersPage({
 
   return (
     <div className="bg-white">
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden rounded-b-[44px] md:rounded-b-[56px] shadow-sm shadow-black/5">
         <div className="absolute inset-0 bg-[linear-gradient(135deg,#0B1220_0%,#111827_55%,#0B1220_100%)]" />
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-[0.07]" />
         <div className="absolute -top-24 -left-24 w-[520px] h-[520px] bg-[rgba(0,229,255,0.18)] rounded-full blur-[160px] pointer-events-none" />

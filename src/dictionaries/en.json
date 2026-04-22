@@ -20,7 +20,7 @@
     },
     "badge": "Trusted Insurance Partner",
     "title": "Trusted Insurance Partner for Your Business",
-    "subtitle": "Professional surety bond and bank guarantee services tailored to your business needs. Fast, reliable, and trusted by leading companies across Indonesia.",
+    "subtitle": "Fast, secure surety bond & bank guarantee services tailored to your business.",
     "cta_primary": "Consult Now",
     "cta_secondary": "Our Services",
     "trusted_by": "Trusted by leading companies"
@@ -78,17 +78,17 @@
       }
     },
     "hero_cards": {
-      "secure_title": "Trusted & Secure Insurance Solutions",
-      "secure_desc": "Your business financial security is our top priority with support from leading insurance partners.",
-      "fast_title": "Fast & Efficient Claim Processing",
-      "fast_desc": "Responsive guarantee issuance and claim processing to support your project continuity.",
-      "professional_title": "Expert Consultation & Risk Assessment",
-      "professional_desc": "Our professional team is ready to provide strategic advice and in-depth risk analysis.",
-      "support_title": "24/7 Dedicated Customer Support",
-      "support_desc": "Customer support services available at all times to answer all your insurance needs."
+      "secure_title": "Secure & Trusted",
+      "secure_desc": "Work with licensed partners to keep your business protected.",
+      "fast_title": "Fast Process",
+      "fast_desc": "Clear workflow with responsive handling from start to finish.",
+      "professional_title": "Expert Advice",
+      "professional_desc": "Guidance from experienced consultants for your project needs.",
+      "support_title": "24/7 Support",
+      "support_desc": "Quick help and updates whenever you need them."
     },
     "hero_stats": {
-      "experience": { "value": "15+", "label": "Years Experience" },
+      "experience": { "value": "4+", "label": "Years Experience" },
       "clients": { "value": "500+", "label": "Clients Served" },
       "satisfaction": { "value": "98%", "label": "Satisfaction" }
     },
