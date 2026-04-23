@@ -83,7 +83,6 @@ export default async function ProductsPage({
                       
                       <div className="mb-10">
                         <h3 className="text-sm font-black text-slate-900 uppercase tracking-widest mb-5 flex items-center gap-2">
-                          <span className="w-6 h-0.5 bg-dwp-blue rounded-full" />
                           {dictionary.products.features_title}
                         </h3>
                         <div className="grid sm:grid-cols-2 gap-y-4 gap-x-6 justify-items-start text-left">

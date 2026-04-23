@@ -6,6 +6,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { ClientEnhancements } from '@/components/ClientEnhancements'
 import AppMotionShell from '@/components/AppMotionShell'
+import InitialLoader from '@/components/InitialLoader'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -45,12 +46,14 @@ export default async function RootLayout({
   return (
     <html suppressHydrationWarning lang={lang} className={`scroll-smooth ${inter.variable} ${poppins.variable}`}>
       <body suppressHydrationWarning className="min-h-screen flex flex-col antialiased font-sans">
-        <Header lang={lang as Locale} />
-        <main className="flex-1">
-          <AppMotionShell lang={lang}>{children}</AppMotionShell>
-        </main>
-        <ClientEnhancements lang={lang} />
-        <Footer lang={lang as Locale} />
+        <InitialLoader>
+          <Header lang={lang as Locale} />
+          <main className="flex-1">
+            <AppMotionShell lang={lang}>{children}</AppMotionShell>
+          </main>
+          <ClientEnhancements lang={lang} />
+          <Footer lang={lang as Locale} />
+        </InitialLoader>
       </body>
     </html>
   )
