@@ -12,6 +12,7 @@ type NavigationCopy = {
   home: string
   about: string
   products: string
+  kalkulator: string
   partners: string
   contact: string
   cta_consult: string
@@ -38,6 +39,12 @@ export default function HeaderClient({
       { key: 'home', href: `/${lang}`, label: navigation.home, match: 'exact' as const },
       { key: 'about', href: `/${lang}/about`, label: navigation.about, match: 'startsWith' as const },
       { key: 'products', href: `/${lang}/products`, label: navigation.products, match: 'startsWith' as const },
+      {
+        key: 'kalkulator',
+        href: `/${lang}/kalkulator`,
+        label: navigation.kalkulator,
+        match: 'startsWith' as const,
+      },
       { key: 'partners', href: `/${lang}/partners`, label: navigation.partners, match: 'startsWith' as const },
       { key: 'contact', href: `/${lang}/contact`, label: navigation.contact, match: 'startsWith' as const },
     ]
