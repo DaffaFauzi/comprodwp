@@ -5,6 +5,7 @@ import { BadgeCheck, Focus, HeartHandshake, Sparkles, Target } from 'lucide-reac
 import FadeIn from '@/components/FadeIn'
 import VisionCard from '@/components/home/VisionCard'
 import SectionHeader from '@/components/SectionHeader'
+import BranchesDirectory from '@/components/BranchesDirectory'
 
 export const metadata = {
   title: 'About Us | PT. Dwi Kusuma Perkasa',
@@ -131,22 +132,11 @@ export default async function AboutPage({
                 {dictionary.about.page.branches_subtitle}
               </p>
 
-              <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                {(dictionary.about.page.branches_list ?? []).map(
-                  (b: { name: string; phone: string; address: string }) => (
-                    <div key={b.name} className="rounded-2xl border border-slate-200 bg-[#F7FAFC] px-6 py-5">
-                      <div className="text-base font-black text-slate-900">{b.name}</div>
-                      <div className="mt-2 text-sm text-slate-600 leading-relaxed">
-                        {b.address}
-                      </div>
-                      <div className="mt-4 text-sm text-slate-700">
-                        <span className="font-semibold text-slate-900">{dictionary.contact.phone_label}:</span>{' '}
-                        <span>{b.phone}</span>
-                      </div>
-                    </div>
-                  )
-                )}
-              </div>
+              <BranchesDirectory
+                branches={dictionary.about.page.branches_list ?? []}
+                phoneLabel={dictionary.contact.phone_label}
+                locale={locale}
+              />
             </div>
           </FadeIn>
         </div>

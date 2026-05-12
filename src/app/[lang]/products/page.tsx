@@ -88,7 +88,7 @@ export default async function ProductsPage({
                         <div className="grid sm:grid-cols-2 gap-y-4 gap-x-6 justify-items-start text-left">
                           {item.features.map((feature: string) => (
                             <div key={feature} className="flex items-start justify-start gap-3 w-full group">
-                              <div className="shrink-0 w-5 h-5 rounded-full bg-dwp-blue/5 border border-dwp-blue/10 flex items-center justify-center text-dwp-blue group-hover:bg-dwp-blue group-hover:text-white transition-colors">
+                              <div className="shrink-0 w-5 h-5 rounded-full bg-dwp-blue/5 border border-dwp-blue/10 flex items-center justify-center text-dwp-blue group-hover:bg-dwp-blue/10 group-hover:border-dwp-blue/20 transition-colors">
                                 <Check className="w-3 h-3" />
                               </div>
                               <span className="text-slate-700 font-medium text-sm leading-snug text-left">{feature}</span>
