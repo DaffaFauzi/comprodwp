@@ -238,6 +238,75 @@
         "title": "Find the Best Guarantee & Insurance Solutions for Your Business",
         "desc": "Fast response within 1x24 hours. Our expert team is ready to provide personalized insurance solutions tailored to your business needs.",
         "button": "Contact Us Now"
+    },
+    "org_structure": {
+      "pill": "Company Structure",
+      "title": "Organizational Structure",
+      "subtitle": "Our professional team works in a structured manner to provide the best service to partners and clients across Indonesia.",
+      "bottom_note": "This organizational structure reflects our commitment to good corporate governance and professional service to all clients.",
+      "levels": {
+        "pemegang_saham": "Controlling Shareholders",
+        "komisaris": "Commissioner",
+        "direktur_utama": "President Director",
+        "direktur": "Director",
+        "managers": {
+          "ops": {
+            "title": "Operational Manager",
+            "supervisors": [
+              "General Affair Supervisor",
+              "General Service Supervisor"
+            ],
+            "staff": [
+              "General Staff",
+              "Business Partner Staff",
+              "Driver",
+              "Cashier",
+              "Office Boy"
+            ]
+          },
+          "tech": {
+            "title": "Technical Manager",
+            "supervisors": [
+              "Warehouse Technical Supervisor",
+              "Project Technical Supervisor"
+            ],
+            "staff": [
+              "Staff 1",
+              "Staff 2",
+              "Staff 3"
+            ]
+          },
+          "finance": {
+            "title": "Finance Manager",
+            "supervisors": [
+              "Finance Supervisor",
+              "Accounting Supervisor"
+            ],
+            "staff": [
+              "Finance Staff",
+              "AR Staff",
+              "Accounting Staff",
+              "Tax Staff"
+            ]
+          },
+          "marketing": {
+            "title": "Marketing Manager",
+            "supervisors": [
+              "Relationship Marketing Supervisor",
+              "Marketing Officer Supervisor"
+            ],
+            "staff": [
+              "RM Staff 1",
+              "RM Staff 2",
+              "RM Staff 3",
+              "RM Staff 4",
+              "RM Staff 5",
+              "Freelance Marketing",
+              "Marketing Officer"
+            ]
+          }
+        }
+      }
     }
   },
   "services": {

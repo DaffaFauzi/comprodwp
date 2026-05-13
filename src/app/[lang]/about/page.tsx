@@ -5,6 +5,7 @@ import { BadgeCheck, Focus, HeartHandshake, Sparkles, Target } from 'lucide-reac
 import FadeIn from '@/components/FadeIn'
 import VisionCard from '@/components/home/VisionCard'
 import SectionHeader from '@/components/SectionHeader'
+import OrgStructure from '@/components/OrgStructure'
 
 export const metadata = {
   title: 'About Us | PT. Dwi Kusuma Perkasa',
@@ -87,6 +88,8 @@ export default async function AboutPage({
           </div>
         </div>
       </section>
+
+      <OrgStructure dict={dictionary} />
 
       <section className="section-y-tight bg-white">
         <div className="container mx-auto px-[var(--layout-page-px)]">

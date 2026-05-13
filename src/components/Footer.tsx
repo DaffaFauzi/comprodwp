@@ -45,6 +45,7 @@ export default async function Footer({ lang }: { lang: Locale }) {
               <Link href={`/${lang}`} className="hover:text-white transition-colors">{dictionary.navigation.home}</Link>
               <Link href={`/${lang}/about`} className="hover:text-white transition-colors">{dictionary.navigation.about}</Link>
               <Link href={`/${lang}/products`} className="hover:text-white transition-colors">{dictionary.navigation.products}</Link>
+              <Link href={`/${lang}/kalkulator`} className="hover:text-white transition-colors">{dictionary.navigation.kalkulator}</Link>
               <Link href={`/${lang}/partners`} className="hover:text-white transition-colors">{dictionary.navigation.partners}</Link>
               <Link href={`/${lang}/contact`} className="hover:text-white transition-colors">{dictionary.navigation.contact}</Link>
             </nav>
