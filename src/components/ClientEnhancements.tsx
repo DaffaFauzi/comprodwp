@@ -82,6 +82,18 @@ function getAssistantReply(input: string, pathname: string, lang: string) {
     : 'I can help. What product are you looking for, or would you like a consultation for your business needs?'
 }
 
+async function getAssistantReplyFromApi(input: string, pathname: string, lang: string) {
+  const res = await fetch('/api/chat', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ message: input, pathname, lang }),
+  })
+  if (!res.ok) throw new Error('Request failed')
+  const data = (await res.json()) as { reply?: unknown }
+  if (typeof data.reply !== 'string') throw new Error('Invalid response')
+  return data.reply
+}
+
 export function ClientEnhancements({ lang }: { lang: string }) {
   const pathname = usePathname() ?? `/${lang}`
 
@@ -230,8 +242,13 @@ export function ClientEnhancements({ lang }: { lang: string }) {
     const pending: Message = { id: assistantId, role: 'assistant', content: '', status: 'sending' }
     setMessages((m) => [...m, userMsg, pending])
 
-    await new Promise((r) => setTimeout(r, 450))
-    const reply = getAssistantReply(text, pathname, lang)
+    let reply = ''
+    try {
+      reply = await getAssistantReplyFromApi(text, pathname, lang)
+    } catch {
+      await new Promise((r) => setTimeout(r, 220))
+      reply = getAssistantReply(text, pathname, lang)
+    }
     setMessages((m) =>
       m.map((x) => (x.id === assistantId ? { ...x, content: reply, status: undefined } : x)),
     )

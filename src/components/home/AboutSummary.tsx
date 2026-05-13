@@ -81,7 +81,7 @@ export default async function AboutSummary({ lang }: { lang: Locale }) {
                 const Icon = missionIcons[key as keyof typeof missionIcons] || BadgeCheck
                 return (
                   <div key={key} className="flex gap-4 group">
-                    <div className="shrink-0 w-10 h-10 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center text-dwp-blue group-hover:bg-dwp-blue group-hover:text-white transition-all duration-300">
+                    <div className="shrink-0 w-10 h-10 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center text-dwp-blue group-hover:bg-dwp-blue/10 group-hover:border-dwp-blue/20 transition-colors duration-300">
                       <Icon className="w-5 h-5" />
                     </div>
                     <div>

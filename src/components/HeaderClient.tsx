@@ -36,7 +36,6 @@ export default function HeaderClient({
 
   const links = useMemo(() => {
     return [
-      { key: 'home', href: `/${lang}`, label: navigation.home, match: 'exact' as const },
       { key: 'about', href: `/${lang}/about`, label: navigation.about, match: 'startsWith' as const },
       { key: 'products', href: `/${lang}/products`, label: navigation.products, match: 'startsWith' as const },
       {
