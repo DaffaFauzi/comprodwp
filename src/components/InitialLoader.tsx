@@ -37,7 +37,7 @@ export default function InitialLoader({ children }: { children: ReactNode }) {
           <div className="flex flex-col items-center gap-6">
             <div className="animate-fadeIn">
               <Image
-                src="/logos/dwp.png"
+                src="/logos/dwp-transparent.png"
                 alt="DWP Logo"
                 width={120}
                 height={120}

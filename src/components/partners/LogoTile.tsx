@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 import { useMemo, useState } from 'react'
-import { motion } from 'framer-motion'
 
 function slugify(input: string) {
   return input
@@ -33,30 +32,19 @@ export default function LogoTile({
   )
 
   return (
-    <motion.div 
-      whileHover={{ 
-        scale: 1.05,
-        boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)"
-      }}
-      className={`relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-4 shadow-sm shadow-slate-200/60 transition-all duration-300 flex items-center justify-center ${className}`}
-    >
-      <div className="w-full flex items-center justify-center">
-        {broken ? (
-          <div className="px-2 text-xs font-black text-slate-700 text-center leading-snug">{name}</div>
-        ) : (
-          <div className="relative w-[92%] h-20 pointer-events-none">
-            <Image
-              src={src}
-              alt={name}
-              fill
-              sizes="(min-width: 1024px) 240px, (min-width: 768px) 200px, 160px"
-              className="object-contain"
-              onError={() => setBroken(true)}
-              priority={false}
-            />
-          </div>
-        )}
-      </div>
-    </motion.div>
+    <div className={`logo-card ${className}`}>
+      {broken ? (
+        <div className="logo-card__fallback">{name}</div>
+      ) : (
+        /* eslint-disable-next-line @next/next/no-img-element */
+        <img
+          src={src}
+          alt={name}
+          className="logo-card__img"
+          onError={() => setBroken(true)}
+          loading="lazy"
+        />
+      )}
+    </div>
   )
 }

@@ -16,7 +16,7 @@ interface PartnerMarqueeProps {
 export default function PartnerMarquee({ 
   items, 
   type = 'logo',
-  speed = 0.8,
+  speed = 0.6,
   gradientColor = 'white'
 }: PartnerMarqueeProps) {
   // Triple the items for seamless infinite scroll
@@ -113,21 +113,21 @@ export default function PartnerMarquee({
     }, 1500)
   }
 
-  const gradientStyle = {
-    '--gradient-from': gradientColor,
-    '--gradient-to': `${gradientColor}00`,
-  } as React.CSSProperties
-
   return (
     <div 
-      className="relative overflow-hidden group cursor-grab active:cursor-grabbing"
+      className="partner-marquee-wrapper"
       onMouseEnter={() => { isHovered.current = true }}
       onMouseLeave={() => { isHovered.current = false }}
-      style={gradientStyle}
     >
+      {/* Left gradient fade */}
+      <div 
+        className="partner-marquee-fade partner-marquee-fade--left pointer-events-none"
+        style={{ background: `linear-gradient(to right, ${gradientColor} 0%, ${gradientColor}ee 30%, transparent 100%)` }}
+      />
+
       <div
         ref={containerRef}
-        className="flex gap-4 overflow-x-hidden select-none py-4 px-2"
+        className="partner-marquee-track cursor-grab active:cursor-grabbing"
         onMouseDown={(e) => handleStart(e.pageX)}
         onMouseMove={(e) => handleMove(e.pageX)}
         onMouseUp={handleEnd}
@@ -140,23 +140,18 @@ export default function PartnerMarquee({
           <div key={`${index}`} className="flex-shrink-0">
             {type === 'logo' ? (
               typeof item === 'string' ? (
-                <div className="w-40 h-16 rounded-2xl border border-slate-200 bg-white flex items-center justify-center text-center px-4 shadow-sm shadow-slate-200/50 transition-all duration-300">
-                  <span className="text-xs font-semibold text-slate-700 pointer-events-none">
-                    {item}
-                  </span>
+                <div className="logo-card logo-card--text">
+                  <span className="logo-card__text">{item}</span>
                 </div>
               ) : (
                 <LogoTile
                   name={item.name}
                   fileName={item.fileName}
-                  className="h-28 min-w-[180px] sm:min-w-[220px]"
                 />
               )
             ) : (
-              <div
-                className="w-40 h-16 rounded-2xl border border-slate-200 bg-white flex items-center justify-center text-center px-4 shadow-sm shadow-slate-200/50 transition-all duration-300"
-              >
-                <span className="text-xs font-semibold text-slate-700 pointer-events-none">
+              <div className="logo-card logo-card--text">
+                <span className="logo-card__text">
                   {typeof item === 'string' ? item : item.name}
                 </span>
               </div>
@@ -164,15 +159,11 @@ export default function PartnerMarquee({
           </div>
         ))}
       </div>
-      
-      {/* Gradient Overlays */}
+
+      {/* Right gradient fade */}
       <div 
-        className="absolute inset-y-0 left-0 w-16 pointer-events-none z-10" 
-        style={{ background: `linear-gradient(to right, ${gradientColor}, ${gradientColor}cc, transparent)` }}
-      />
-      <div 
-        className="absolute inset-y-0 right-0 w-16 pointer-events-none z-10" 
-        style={{ background: `linear-gradient(to left, ${gradientColor}, ${gradientColor}cc, transparent)` }}
+        className="partner-marquee-fade partner-marquee-fade--right pointer-events-none"
+        style={{ background: `linear-gradient(to left, ${gradientColor} 0%, ${gradientColor}ee 30%, transparent 100%)` }}
       />
     </div>
   )

@@ -85,7 +85,7 @@ export default function HeaderClient({
             aria-label="Home"
           >
             <Image
-              src="/logos/dwp.png"
+              src="/logos/dwp-transparent.png"
               alt="DWP"
               width={80}
               height={36}

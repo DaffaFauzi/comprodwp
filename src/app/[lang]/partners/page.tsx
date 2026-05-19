@@ -31,7 +31,7 @@ export default async function PartnersPage({
   ]
   const insurancePrivate = [
     { name: 'Rama', fileName: 'rama' },
-    { name: 'Awasta', fileName: 'awasta' },
+    { name: 'Aswata', fileName: 'aswata' },
     { name: 'Bumida', fileName: 'bumida' },
     { name: 'Arthagraha', fileName: 'arthagraha' },
     { name: 'Sinarmas', fileName: 'sinarmas' },

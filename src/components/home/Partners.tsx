@@ -6,6 +6,27 @@ import PartnersTabs from './PartnersTabs'
 export default async function Partners({ lang }: { lang: Locale }) {
   const dictionary = await getDictionary(lang)
 
+  const topInsurance = [
+    { name: 'Askrindo', fileName: 'askrindo' },
+    { name: 'Jamkrindo', fileName: 'jamkrindo' },
+    { name: 'Jasaraharja', fileName: 'jasaraharja' },
+    { name: 'Sinarmas', fileName: 'sinarmas' },
+    { name: 'BRINS', fileName: 'brins' },
+    { name: 'Tugu', fileName: 'tugu' },
+    { name: 'ACA', fileName: 'aca' },
+    { name: 'Rama', fileName: 'rama' },
+  ]
+  const topBank = [
+    { name: 'Bank Mandiri', fileName: 'mandiri' },
+    { name: 'Bank BRI', fileName: 'bri' },
+    { name: 'Bank BCA', fileName: 'bca' },
+    { name: 'Bank BNI', fileName: 'bni' },
+    { name: 'Bank BTN', fileName: 'btn' },
+    { name: 'CIMB Niaga', fileName: 'cimb' },
+    { name: 'Bank Danamon', fileName: 'danamon' },
+    { name: 'Bank Permata', fileName: 'permata' },
+  ]
+
   return (
     <section className="bg-white section-y border-t border-slate-100/50">
       <div className="container mx-auto px-[var(--layout-page-px)]">
@@ -22,8 +43,8 @@ export default async function Partners({ lang }: { lang: Locale }) {
         <PartnersTabs
           insuranceLabel={dictionary.partners.categories.insurance}
           bankLabel={dictionary.partners.categories.bank}
-          insurance={dictionary.partners.list.insurance}
-          bank={dictionary.partners.list.bank}
+          insurance={topInsurance}
+          bank={topBank}
         />
       </div>
     </section>

@@ -12,8 +12,8 @@ export default function PartnersTabs({
 }: {
   insuranceLabel: string
   bankLabel: string
-  insurance: string[]
-  bank: string[]
+  insurance: { name: string; fileName: string }[]
+  bank: { name: string; fileName: string }[]
 }) {
   const [tab, setTab] = useState<'insurance' | 'bank'>('insurance')
 
@@ -57,7 +57,7 @@ export default function PartnersTabs({
         >
           <PartnerMarquee
             items={list}
-            type="text"
+            type="logo"
             gradientColor="#f7f8fb"
           />
         </motion.div>

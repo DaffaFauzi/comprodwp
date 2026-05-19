@@ -12,8 +12,8 @@ export default async function Footer({ lang }: { lang: Locale }) {
       <div className="container mx-auto px-[var(--layout-page-px)] pt-16 pb-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="space-y-6">
-            <div className="w-28 h-16 rounded-2xl bg-white overflow-hidden flex items-center justify-center p-2 shadow-lg shadow-black/10 transition-transform hover:scale-105">
-              <Image src="/logos/dwp.png" alt="DWP" width={96} height={40} className="object-contain" />
+            <div className="inline-flex items-center justify-start transition-transform hover:scale-105">
+              <Image src="/logos/dwp-transparent.png" alt="DWP" width={120} height={48} className="object-contain" />
             </div>
             <div className="text-xl font-black font-heading">{dictionary.footer.about_title}</div>
             <p className="text-sm leading-relaxed text-white/85">
