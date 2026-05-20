@@ -117,7 +117,7 @@ const fadeInUp = {
   transition: {
     duration: 0.6,
     ease: "easeOut",
-  },
+  } as any,
 }
 
 // --- Components ---
@@ -132,8 +132,8 @@ const ExecCard = ({ title, icon: Icon, delay = 0, variant = 'primary' }: { title
     className="relative group w-full max-w-[280px] sm:max-w-[320px]"
   >
     <div className={`relative flex items-center gap-4 p-[1px] rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${variant === 'primary'
-        ? 'bg-gradient-to-r from-dwp-blue via-dwp-teal to-dwp-blue'
-        : 'bg-gradient-to-r from-slate-400 to-slate-500'
+      ? 'bg-gradient-to-r from-dwp-blue via-dwp-teal to-dwp-blue'
+      : 'bg-gradient-to-r from-slate-400 to-slate-500'
       }`}>
       <div className={`flex items-center gap-4 w-full px-6 py-4 rounded-[15px] ${variant === 'primary' ? 'bg-[#062b4a]' : 'bg-white'
         }`}>
