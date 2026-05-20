@@ -2,12 +2,12 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { 
-  Building2, 
-  UserCog, 
-  Settings, 
-  Wrench, 
-  BarChart, 
+import {
+  Building2,
+  UserCog,
+  Settings,
+  Wrench,
+  BarChart,
   Megaphone,
   Info,
   Users,
@@ -112,10 +112,12 @@ function getIcon(name: string, fallback: any) {
 
 // --- Animations ---
 const fadeInUp = {
-  initial: { opacity: 0, y: 20 },
+  initial: { opacity: 0, y: 40 },
   whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
-  transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] }
+  transition: {
+    duration: 0.6,
+    ease: "easeOut",
+  },
 }
 
 // --- Components ---
@@ -129,22 +131,18 @@ const ExecCard = ({ title, icon: Icon, delay = 0, variant = 'primary' }: { title
     transition={{ ...fadeInUp.transition, delay }}
     className="relative group w-full max-w-[280px] sm:max-w-[320px]"
   >
-    <div className={`relative flex items-center gap-4 p-[1px] rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${
-      variant === 'primary' 
-        ? 'bg-gradient-to-r from-dwp-blue via-dwp-teal to-dwp-blue' 
+    <div className={`relative flex items-center gap-4 p-[1px] rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${variant === 'primary'
+        ? 'bg-gradient-to-r from-dwp-blue via-dwp-teal to-dwp-blue'
         : 'bg-gradient-to-r from-slate-400 to-slate-500'
-    }`}>
-      <div className={`flex items-center gap-4 w-full px-6 py-4 rounded-[15px] ${
-        variant === 'primary' ? 'bg-[#062b4a]' : 'bg-white'
       }`}>
-        <div className={`flex items-center justify-center w-10 h-10 rounded-xl shrink-0 ${
-          variant === 'primary' ? 'bg-white/10 backdrop-blur-md border border-white/20' : 'bg-slate-100 border border-slate-200'
+      <div className={`flex items-center gap-4 w-full px-6 py-4 rounded-[15px] ${variant === 'primary' ? 'bg-[#062b4a]' : 'bg-white'
         }`}>
+        <div className={`flex items-center justify-center w-10 h-10 rounded-xl shrink-0 ${variant === 'primary' ? 'bg-white/10 backdrop-blur-md border border-white/20' : 'bg-slate-100 border border-slate-200'
+          }`}>
           <Icon className={`w-5 h-5 ${variant === 'primary' ? 'text-white' : 'text-slate-600'}`} />
         </div>
-        <span className={`font-bold text-xs sm:text-sm tracking-wide uppercase ${
-          variant === 'primary' ? 'text-white' : 'text-slate-800'
-        }`}>
+        <span className={`font-bold text-xs sm:text-sm tracking-wide uppercase ${variant === 'primary' ? 'text-white' : 'text-slate-800'
+          }`}>
           {title}
         </span>
       </div>
@@ -238,7 +236,7 @@ function getStaffForSupervisor(managerKey: string, supervisorIdx: number, allSta
 // Connector Components
 const VerticalConnector = ({ height = 48, active = false }: { height?: number; active?: boolean }) => (
   <div className="relative flex flex-col items-center py-2 z-10">
-    <div 
+    <div
       className={`w-[2px] ${active ? 'bg-[#062b4a]' : 'bg-slate-300'}`}
       style={{ height: `${height}px` }}
     />
@@ -271,10 +269,10 @@ export default function OrgStructure({ dict }: { dict: any }) {
     <section id="struktur-organisasi" className="py-24 sm:py-32 bg-white overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          
+
           {/* HEADER */}
           <div className="text-center mb-20">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -283,7 +281,7 @@ export default function OrgStructure({ dict }: { dict: any }) {
               <Building2 className="w-3.5 h-3.5 mr-2" />
               {d.pill}
             </motion.div>
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -292,7 +290,7 @@ export default function OrgStructure({ dict }: { dict: any }) {
             >
               {d.title}
             </motion.h2>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -305,21 +303,21 @@ export default function OrgStructure({ dict }: { dict: any }) {
 
           {/* TREE START */}
           <div className="flex flex-col items-center">
-            
+
             {/* Top Board: Shareholders & Commissioner */}
             <div className="flex flex-col items-center w-full mb-12">
               <ExecCard title={levels.pemegang_saham} icon={Users} variant="primary" />
               <VerticalConnector height={40} active />
               <ExecCard title={levels.komisaris} icon={Shield} variant="primary" />
               <VerticalConnector height={40} active />
-              
+
               {/* Executive: Pres Dir & Dir */}
               <div className="relative flex flex-col items-center w-full">
                 <ExecCard title={levels.direktur_utama} icon={UserCog} />
                 <VerticalConnector height={40} active />
                 <ExecCard title={levels.direktur} icon={Briefcase} />
                 <VerticalConnector height={60} active />
-                
+
               </div>
             </div>
 
@@ -327,12 +325,12 @@ export default function OrgStructure({ dict }: { dict: any }) {
             <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative mt-20">
               {/* Horizontal line for Desktop - Continuous & Precise */}
               <div className="hidden lg:block absolute -top-[80px] left-[calc(12.5%-12px)] right-[calc(12.5%-12px)] h-[2px] bg-[#062b4a] pointer-events-none" />
-              
+
               {managers.map((m, idx) => (
                 <div key={m.key} className="flex flex-col">
                   {/* Manager Level */}
                   <ManagerCardComponent title={m.data.title} icon={m.icon} delay={idx * 0.1} />
-                  
+
                   {/* Connector to Supervisors */}
                   <div className="flex flex-col items-center my-8">
                     <div className="w-[2px] h-12 bg-slate-300" />
@@ -347,20 +345,20 @@ export default function OrgStructure({ dict }: { dict: any }) {
                       const supervisorStaff = getStaffForSupervisor(m.key, sIdx, m.data.staff)
                       return (
                         <div key={sIdx} className="flex flex-col items-center">
-                          <SupervisorCardComponent 
-                            name={s} 
-                            delay={0.2 + idx * 0.1 + sIdx * 0.1} 
+                          <SupervisorCardComponent
+                            name={s}
+                            delay={0.2 + idx * 0.1 + sIdx * 0.1}
                           />
-                          
+
                           {/* Connector Line to Staff */}
                           <div className="w-[1px] h-4 bg-slate-200" />
-                          
+
                           <div className="space-y-1.5 w-full">
                             {supervisorStaff.map((st, stIdx) => (
                               <div key={stIdx} className="flex flex-col items-center w-full">
-                                <StaffCardComponent 
-                                  name={st} 
-                                  delay={0.3 + idx * 0.1 + sIdx * 0.1 + stIdx * 0.05} 
+                                <StaffCardComponent
+                                  name={st}
+                                  delay={0.3 + idx * 0.1 + sIdx * 0.1 + stIdx * 0.05}
                                 />
                                 {stIdx < supervisorStaff.length - 1 && (
                                   <div className="w-[1px] h-1.5 bg-slate-100" />
