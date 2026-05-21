@@ -438,7 +438,7 @@
       "cb": {
         "title": "Custom Bond",
         "desc": "Custom Bond adalah jaminan pelaksanaan kepabeanan yang diterbitkan oleh perusahaan asuransi atau lembaga penjaminan untuk memastikan pemenuhan kewajiban pabean Anda secara efektif.",
-        "features": ["LAYANG-LAYANG", "KABER", "Vooruitslag", "SPKPBM", "TPS", "Impor Sementara (OB 23)"]
+        "features": ["KITE", "KABER", "Vooruitslag", "SPKPBM", "TPS", "Impor Sementara (OB 23)"]
       },
       "general": {
         "title": "Asuransi Umum",
@@ -453,7 +453,7 @@
     "page_heading_line1": "TERHUBUNG",
     "page_heading_line2": "DENGAN KAMI",
     "address_label": "Alamat Kantor",
-    "address": "Office Tower Fontana Lt. 32 Unit C1 The Mansion Bougenville Jl. Trembesi Blok D, Jakarta Utara 14410",
+    "address": "Office Tower Fontana Lt. 32 Unit B1 The Mansion Bougenville Jl. Trembesi Blok D, Jakarta Utara 14410",
     "phone_label": "Telepon",
     "phone": "081288893223",
     "email_label": "Email",
@@ -500,5 +500,34 @@
     "contact_title": "Kontak",
     "social_title": "Ikuti Kami",
     "copyright": "© 2024 PT. Dwi Kusuma Perkasa. All rights reserved."
+  },
+  "calculatorPage": {
+    "title": "Kalkulator Premi",
+    "description": "Hitung estimasi premi jaminan Anda dengan cepat dan akurat.",
+    "wizardTitle": "Perhitungan Estimasi Premi",
+    "wizardDesc": "Isi setiap langkah secara berurutan. Langkah berikutnya akan terbuka setelah langkah saat ini valid.",
+    "stepLabel": "Langkah",
+    "stepHint1": "Masukkan nilai jaminan terlebih dahulu.",
+    "stepHint2": "Pilih jenis produk.",
+    "stepHint3": "Pilih jenis jaminan.",
+    "stepHint4": "Pilih durasi waktu.",
+    "fields": {
+      "projectValue": "Nilai Jaminan",
+      "projectPlaceholder": "Masukkan nilai jaminan (Rp)",
+      "guaranteeType": "Jenis Produk",
+      "suretyType": "Jenis Jaminan",
+      "duration": "Durasi"
+    },
+    "suretyTypes": {
+      "penawaran": "Jaminan Penawaran",
+      "uang-muka": "Jaminan Uang Muka",
+      "pelaksanaan": "Jaminan Pelaksanaan",
+      "pemeliharaan": "Jaminan Pemeliharaan"
+    },
+    "months": "Bulan",
+    "resultLabel": "Estimasi Premi",
+    "disclaimer": "Hasil perhitungan ini merupakan estimasi dan dapat berbeda sesuai kebijakan masing-masing penerbit.",
+    "cta": "Konsultasikan Sekarang",
+    "waMessage": "Halo DWP, saya ingin bertanya tentang estimasi premi {prod} {type} dengan nilai jaminan {val} untuk durasi {dur}."
   }
 }

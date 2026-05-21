@@ -438,7 +438,7 @@
       "cb": {
         "title": "Custom Bond",
         "desc": "Guarantees payment of import duties and taxes, facilitating smooth customs clearance.",
-        "features": ["Customs Bond", "KABER", "Vooruitslag", "SPKPBM", "TPS", "Temporary Import (OB 23)"]
+        "features": ["KITE", "KABER", "Vooruitslag", "SPKPBM", "TPS", "Temporary Import (OB 23)"]
       },
       "general": {
         "title": "General Insurance",
@@ -453,7 +453,7 @@
     "page_heading_line1": "GET IN",
     "page_heading_line2": "TOUCH",
     "address_label": "Office Address",
-    "address": "Office Tower Fontana Lt. 32 Unit C1 The Mansion Bougenville Jl. Trembesi Blok D, Jakarta Utara 14410",
+    "address": "Office Tower Fontana Lt. 32 Unit B1 The Mansion Bougenville Jl. Trembesi Blok D, Jakarta Utara 14410",
     "phone_label": "Phone",
     "phone": "081288893223",
     "email_label": "Email",
@@ -500,5 +500,34 @@
     "contact_title": "Contact",
     "social_title": "Follow Us",
     "copyright": "© 2024 PT. Dwi Kusuma Perkasa. All rights reserved."
+  },
+  "calculatorPage": {
+    "title": "Premium Calculator",
+    "description": "Calculate your guarantee premium estimate quickly and accurately.",
+    "wizardTitle": "Premium Estimate Calculation",
+    "wizardDesc": "Fill in each step sequentially. The next step will open after the current step is valid.",
+    "stepLabel": "Step",
+    "stepHint1": "Please enter the guarantee value first.",
+    "stepHint2": "Please select the product type.",
+    "stepHint3": "Please select the guarantee type.",
+    "stepHint4": "Please select the duration.",
+    "fields": {
+      "projectValue": "Guarantee Value",
+      "projectPlaceholder": "Enter guarantee value (Rp)",
+      "guaranteeType": "Product Type",
+      "suretyType": "Guarantee Type",
+      "duration": "Duration"
+    },
+    "suretyTypes": {
+      "penawaran": "Bid Bond",
+      "uang-muka": "Advance Payment Bond",
+      "pelaksanaan": "Performance Bond",
+      "pemeliharaan": "Maintenance Bond"
+    },
+    "months": "Months",
+    "resultLabel": "Premium Estimate",
+    "disclaimer": "This calculation result is an estimate and may differ according to the policy of each issuer.",
+    "cta": "Consult Now",
+    "waMessage": "Hello DWP, I would like to inquire about the premium estimate for {prod} {type} with a guarantee value of {val} for a duration of {dur}."
   }
 }

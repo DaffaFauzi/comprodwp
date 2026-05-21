@@ -55,10 +55,6 @@ export default async function Footer({ lang }: { lang: Locale }) {
             <div className="text-xl font-black font-heading">{dictionary.footer.social_title}</div>
             <div className="space-y-3 text-sm text-white/85">
               <div className="flex items-center gap-3">
-                <Facebook className="w-4 h-4 text-white/85" />
-                <span>PT. Dwi Kusuma Perkasa</span>
-              </div>
-              <div className="flex items-center gap-3">
                 <Linkedin className="w-4 h-4 text-white/85" />
                 <span>PT. Dwi Kusuma Perkasa</span>
               </div>
@@ -70,16 +66,7 @@ export default async function Footer({ lang }: { lang: Locale }) {
 
             <div className="pt-2 flex items-center gap-4">
               <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Facebook"
-                className="h-11 w-11 rounded-2xl bg-white/12 border border-white/15 flex items-center justify-center hover:bg-white/18 transition-colors"
-              >
-                <Facebook className="w-5 h-5 text-white" />
-              </a>
-              <a
-                href="https://www.instagram.com/pt.dwikusumaperkasa"
+                href="https://www.instagram.com/pt.dwikusumaperkasa?igsh=MWdwbHVldGVnZWMxZQ=="
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Instagram"
@@ -88,7 +75,7 @@ export default async function Footer({ lang }: { lang: Locale }) {
                 <Instagram className="w-5 h-5 text-white" />
               </a>
               <a
-                href="https://www.linkedin.com/in/dwi-kusuma-perkasa-191543402/"
+                href="https://www.linkedin.com/in/dwi-kusuma-perkasa-191543402?utm_source=share_via&utm_content=profile&utm_medium=member_android"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="LinkedIn"

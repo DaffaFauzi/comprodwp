@@ -38,8 +38,6 @@ export default async function AboutPage({
                 chipLabel={locale === 'id' ? 'Visi' : dictionary.about.vision}
                 title={dictionary.about.vision}
                 text={dictionary.about.vision_desc}
-                moreLabel={dictionary.home.about_section.vision_more}
-                closeLabel={dictionary.home.about_section.vision_close}
                 imageSrc="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop"
                 imageAlt="Corporate building"
               />

@@ -43,7 +43,36 @@ export default function ContactForm({ dictionary }: { dictionary: ContactDiction
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+
+    const formData = new FormData(e.target as HTMLFormElement)
+    const data = {
+      name: formData.get('name') as string,
+      phone: formData.get('phone') as string,
+      email: formData.get('email') as string,
+      service: formData.get('subject') as string,
+      message: formData.get('message') as string,
+    }
+
+    const waMessage = `Halo Tim DWP Insurance,
+
+Saya ${data.name} ingin bertanya terkait layanan ${data.service || 'Asuransi'}.
+
+Data Kontak:
+- Nama: ${data.name}
+- Telepon: ${data.phone}
+- Email: ${data.email}
+
+Pesan:
+${data.message}
+
+Terima kasih.`
+
+    const waUrl = `https://wa.me/6281288893223?text=${encodeURIComponent(waMessage)}`
+    
+    // Simulate brief loading for better UX
+    await new Promise((resolve) => setTimeout(resolve, 800))
+    
+    window.open(waUrl, '_blank')
     setIsSubmitting(false)
     setIsSuccess(true)
   }

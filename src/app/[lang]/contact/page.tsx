@@ -86,11 +86,10 @@ export default async function ContactPage({
 
                   <div className="mt-6 rounded-xl border border-slate-200 bg-white p-5 shadow-sm shadow-slate-200/40">
                     <div className="text-sm font-bold text-slate-900">{dictionary.footer.social_title}</div>
-                    <div className="mt-4 grid grid-cols-3 gap-3">
+                    <div className="mt-4 grid grid-cols-2 gap-3">
                       {[
-                        { label: 'LinkedIn', handle: 'PT. Dwi Kusuma Perkasa', href: 'https://www.linkedin.com/in/dwi-kusuma-perkasa-191543402/', icon: Linkedin },
-                        { label: 'Facebook', handle: 'PT. Dwi Kusuma Perkasa', href: 'https://facebook.com', icon: Facebook },
-                        { label: 'Instagram', handle: '@pt.dwikusumaperkasa', href: 'https://www.instagram.com/pt.dwikusumaperkasa', icon: Instagram },
+                        { label: 'LinkedIn', handle: 'PT. Dwi Kusuma Perkasa', href: 'https://www.linkedin.com/in/dwi-kusuma-perkasa-191543402?utm_source=share_via&utm_content=profile&utm_medium=member_android', icon: Linkedin },
+                        { label: 'Instagram', handle: '@pt.dwikusumaperkasa', href: 'https://www.instagram.com/pt.dwikusumaperkasa?igsh=MWdwbHVldGVnZWMxZQ==', icon: Instagram },
                       ].map((s) => {
                         const Icon = s.icon
                         return (
