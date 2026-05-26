@@ -95,13 +95,9 @@ const staffIcons: Record<string, any> = {
   'Staff RM 1': TrendingUp,
   'Staff RM 2': TrendingUp,
   'Staff RM 3': TrendingUp,
-  'Staff RM 4': TrendingUp,
-  'Staff RM 5': TrendingUp,
   'RM Staff 1': TrendingUp,
   'RM Staff 2': TrendingUp,
   'RM Staff 3': TrendingUp,
-  'RM Staff 4': TrendingUp,
-  'RM Staff 5': TrendingUp,
   'Freelance Marketing': Monitor,
   'Marketing Officer': Star,
 }
@@ -129,13 +125,13 @@ const ExecCard = ({ title, icon: Icon, delay = 0, variant = 'primary' }: { title
     whileInView="whileInView"
     viewport={{ once: true }}
     transition={{ ...fadeInUp.transition, delay }}
-    className="relative group w-full max-w-[280px] sm:max-w-[320px]"
+    className="relative group w-full max-w-[220px] sm:max-w-[260px]"
   >
     <div className={`relative flex items-center gap-4 p-[1px] rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${variant === 'primary'
       ? 'bg-gradient-to-r from-dwp-blue via-dwp-teal to-dwp-blue'
       : 'bg-gradient-to-r from-slate-400 to-slate-500'
       }`}>
-      <div className={`flex items-center gap-4 w-full px-6 py-4 rounded-[15px] ${variant === 'primary' ? 'bg-[#062b4a]' : 'bg-white'
+      <div className={`flex items-center justify-center gap-4 w-full px-6 py-4 rounded-[15px] ${variant === 'primary' ? 'bg-[#062b4a]' : 'bg-white'
         }`}>
         <div className={`flex items-center justify-center w-10 h-10 rounded-xl shrink-0 ${variant === 'primary' ? 'bg-white/10 backdrop-blur-md border border-white/20' : 'bg-slate-100 border border-slate-200'
           }`}>
@@ -228,7 +224,7 @@ function getStaffForSupervisor(managerKey: string, supervisorIdx: number, allSta
     return supervisorIdx === 0 ? allStaff.slice(0, 2) : allStaff.slice(2)
   }
   if (managerKey === 'marketing') {
-    return supervisorIdx === 0 ? allStaff.slice(0, 5) : allStaff.slice(5)
+    return supervisorIdx === 0 ? allStaff.slice(0, 3) : allStaff.slice(3)
   }
   return []
 }
@@ -266,12 +262,12 @@ export default function OrgStructure({ dict }: { dict: any }) {
   }))
 
   return (
-    <section id="struktur-organisasi" className="py-24 sm:py-32 bg-white overflow-hidden">
+    <section id="struktur-organisasi" className="py-12 sm:py-16 bg-white overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
 
           {/* HEADER */}
-          <div className="text-center mb-20">
+          <div className="text-center mb-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -322,7 +318,7 @@ export default function OrgStructure({ dict }: { dict: any }) {
             </div>
 
             {/* Management Grid */}
-            <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative mt-20">
+            <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative mt-10">
               {/* Horizontal line for Desktop - Continuous & Precise */}
               <div className="hidden lg:block absolute -top-[80px] left-[calc(12.5%-12px)] right-[calc(12.5%-12px)] h-[2px] bg-[#062b4a] pointer-events-none" />
 
@@ -381,7 +377,7 @@ export default function OrgStructure({ dict }: { dict: any }) {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.8 }}
-            className="mt-32 pt-10 border-t border-slate-100 flex flex-col md:flex-row items-center justify-center gap-4 text-slate-400 text-sm text-center"
+            className="mt-10 pt-8 border-t border-slate-100 flex flex-col md:flex-row items-center justify-center gap-4 text-slate-400 text-sm text-center"
           >
             <div className="flex items-center justify-center w-10 h-10 rounded-full bg-slate-50 text-slate-400">
               <Info className="w-5 h-5" />

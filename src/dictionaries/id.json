@@ -89,9 +89,18 @@
       "support_desc": "Bantuan dan update cepat kapan pun dibutuhkan."
     },
     "hero_stats": {
-      "experience": { "value": "4+", "label": "Tahun Pengalaman" },
-      "clients": { "value": "500+", "label": "Klien Terlayani" },
-      "satisfaction": { "value": "98%", "label": "Kepuasan" }
+      "experience": {
+        "value": "4+",
+        "label": "Tahun Pengalaman"
+      },
+      "clients": {
+        "value": "500+",
+        "label": "Klien Terlayani"
+      },
+      "satisfaction": {
+        "value": "98%",
+        "label": "Kepuasan"
+      }
     },
     "comprehensive_title": "Solusi Asuransi Komprehensif",
     "comprehensive_subtitle": "Layanan asuransi dan penjaminan yang dirancang untuk mendukung proyek dan operasional bisnis Anda.",
@@ -99,10 +108,22 @@
     "different_subtitle": "Mengutamakan kecepatan, transparansi, dan kualitas layanan untuk setiap kebutuhan klien.",
     "different_pill": "Mengapa Memilih Kami?",
     "stats": {
-      "experience": { "value": "4+", "label": "Tahun-tahun Keunggulan" },
-      "clients": { "value": "500+", "label": "Klien yang Puas" },
-      "success": { "value": "98%", "label": "Kepuasan Pelanggan" },
-      "support": { "value": "24/7", "label": "Dukungan Pelanggan" }
+      "experience": {
+        "value": "4+",
+        "label": "Tahun-tahun Keunggulan"
+      },
+      "clients": {
+        "value": "500+",
+        "label": "Klien yang Puas"
+      },
+      "success": {
+        "value": "98%",
+        "label": "Kepuasan Pelanggan"
+      },
+      "support": {
+        "value": "24/7",
+        "label": "Dukungan Pelanggan"
+      }
     },
     "process_pill": "Cara Kerjanya",
     "process_title": "Proses yang Sederhana & Mudah",
@@ -139,21 +160,81 @@
         }
       ],
       "branches_list": [
-        { "name": "Bandar Lampung", "phone": "+62 85279627653", "address": "Jl. Pulau Singkep No. 126 Ruko E, Kel. Sukarame Baru, Kec. Sukarame, Kota Bandar Lampung" },
-        { "name": "Banjarmasin", "phone": "+62 8115133397", "address": "Komplek Palace Blok A No. 4 Tanta Hulu, Kec. Tanta, Kab. Tabalong, Kalimantan Selatan" },
-        { "name": "Bandung", "phone": "+62 85213599998", "address": "Jl. H. Sugandi No. 5 Komp. Bumi Manjahlega Indah RT 006 RW 013, Kel. Manjahlega, Kec. Rancasari, Kota Bandung" },
-        { "name": "Pontianak", "phone": "+62 85255229191", "address": "Jl. Kesehatan Gg. Amanah No. 11 (rumah ke-2 sebelah kiri) RT 001 RW 012, Kel. Kota Baru, Kec. Pontianak Selatan, Kota Pontianak" },
-        { "name": "Surabaya", "phone": "+62 81233774583", "address": "Jl. Krukah Tengah No. 73, Surabaya" },
-        { "name": "Balikpapan", "phone": "+62 85321819290", "address": "Ruko Sepinggan Pratama Blok SQ3–11, Jl. Sepinggan Pratama, Sepinggan, Kec. Balikpapan Selatan, Kota Balikpapan" },
-        { "name": "Solo", "phone": "+62 81318253224", "address": "Jl. Ahmad Yani 40, The Sunan Hotel (Lobby Hotel Arcade I), 57143, Gilingan, Banjarsari, Kota Surakarta, Jawa Tengah 57134" },
-        { "name": "Jambi", "phone": "+62 81320082085", "address": "Alifia Residence Blok E, 05, Kel. Kenali Asam Atas, Kec. Kota Baru, Kota Jambi" },
-        { "name": "Makassar", "phone": "+62 85299216789", "address": "Komplek Zamrud 2 Blok J No. 14, Jl. Adyaksa Baru, Kel. Masale, Kec. Panakkukang, Kota Makassar" },
-        { "name": "Banda Aceh", "phone": "+62 811671313", "address": "Jl. Cut Nyan Dhien No. 464, Lamteumen Barat, Kec. Jaya Baru, Kota Banda Aceh" },
-        { "name": "Palembang", "phone": "+62 81373795859", "address": "Jl. Basuki Rahmat No. 1674 RT 025 RW 006, Kel. Pahlawan, Kec. Ilir Timur I, Palembang 30126" },
-        { "name": "Kendari", "phone": "+62 82258674205", "address": "Jl. Sao-Sao, Kel. Bende, Kec. Kadia, Kota Kendari, Sulawesi Tenggara" },
-        { "name": "Bali", "phone": "+62 818135175", "address": "Jl. Wani No. 1 Gerokgak Gede, Desa Delod Peken, Kec. Tabanan, Kab. Tabanan, Provinsi Bali" },
-        { "name": "Mataram", "phone": "+62 82341507928", "address": "Jl. Airlangga No. 11x, Gomong, Kec. Selaparang, Kota Mataram, Nusa Tenggara Barat" },
-        { "name": "Batam", "phone": "+62 82367081206", "address": "Komplek Bumi Riau Makmur Blok D No. 14, Jl. Laksamana Bintan, Sungai Panas, Batam" }
+        {
+          "name": "Bandar Lampung",
+          "phone": "+62 85279627653",
+          "address": "Jl. Pulau Singkep No. 126 Ruko E, Kel. Sukarame Baru, Kec. Sukarame, Kota Bandar Lampung"
+        },
+        {
+          "name": "Banjarmasin",
+          "phone": "+62 8115133397",
+          "address": "Komplek Palace Blok A No. 4 Tanta Hulu, Kec. Tanta, Kab. Tabalong, Kalimantan Selatan"
+        },
+        {
+          "name": "Bandung",
+          "phone": "+62 85213599998",
+          "address": "Jl. H. Sugandi No. 5 Komp. Bumi Manjahlega Indah RT 006 RW 013, Kel. Manjahlega, Kec. Rancasari, Kota Bandung"
+        },
+        {
+          "name": "Pontianak",
+          "phone": "+62 85255229191",
+          "address": "Jl. Kesehatan Gg. Amanah No. 11 (rumah ke-2 sebelah kiri) RT 001 RW 012, Kel. Kota Baru, Kec. Pontianak Selatan, Kota Pontianak"
+        },
+        {
+          "name": "Surabaya",
+          "phone": "+62 81233774583",
+          "address": "Jl. Krukah Tengah No. 73, Surabaya"
+        },
+        {
+          "name": "Balikpapan",
+          "phone": "+62 85321819290",
+          "address": "Ruko Sepinggan Pratama Blok SQ3–11, Jl. Sepinggan Pratama, Sepinggan, Kec. Balikpapan Selatan, Kota Balikpapan"
+        },
+        {
+          "name": "Solo",
+          "phone": "+62 81318253224",
+          "address": "Jl. Ahmad Yani 40, The Sunan Hotel (Lobby Hotel Arcade I), 57143, Gilingan, Banjarsari, Kota Surakarta, Jawa Tengah 57134"
+        },
+        {
+          "name": "Jambi",
+          "phone": "+62 81320082085",
+          "address": "Alifia Residence Blok E, 05, Kel. Kenali Asam Atas, Kec. Kota Baru, Kota Jambi"
+        },
+        {
+          "name": "Makassar",
+          "phone": "+62 85299216789",
+          "address": "Komplek Zamrud 2 Blok J No. 14, Jl. Adyaksa Baru, Kel. Masale, Kec. Panakkukang, Kota Makassar"
+        },
+        {
+          "name": "Banda Aceh",
+          "phone": "+62 811671313",
+          "address": "Jl. Cut Nyan Dhien No. 464, Lamteumen Barat, Kec. Jaya Baru, Kota Banda Aceh"
+        },
+        {
+          "name": "Palembang",
+          "phone": "+62 81373795859",
+          "address": "Jl. Basuki Rahmat No. 1674 RT 025 RW 006, Kel. Pahlawan, Kec. Ilir Timur I, Palembang 30126"
+        },
+        {
+          "name": "Kendari",
+          "phone": "+62 82258674205",
+          "address": "Jl. Sao-Sao, Kel. Bende, Kec. Kadia, Kota Kendari, Sulawesi Tenggara"
+        },
+        {
+          "name": "Bali",
+          "phone": "+62 818135175",
+          "address": "Jl. Wani No. 1 Gerokgak Gede, Desa Delod Peken, Kec. Tabanan, Kab. Tabanan, Provinsi Bali"
+        },
+        {
+          "name": "Mataram",
+          "phone": "+62 82341507928",
+          "address": "Jl. Airlangga No. 11x, Gomong, Kec. Selaparang, Kota Mataram, Nusa Tenggara Barat"
+        },
+        {
+          "name": "Batam",
+          "phone": "+62 82367081206",
+          "address": "Komplek Bumi Riau Makmur Blok D No. 14, Jl. Laksamana Bintan, Sungai Panas, Batam"
+        }
       ],
       "history_pill": "Sejarah Perusahaan",
       "history_subtitle": "Perjalanan kami membangun layanan yang cepat, aman, dan dapat diandalkan.",
@@ -235,9 +316,9 @@
     },
     "cta": "Lebih Lanjut Tentang Kami",
     "cta_strip": {
-        "title": "Temukan Solusi Penjaminan & Asuransi Terbaik untuk Bisnis Anda",
-        "desc": "Respon cepat dalam 1x24 jam. Tim ahli kami siap memberikan solusi asuransi yang dipersonalisasi dan disesuaikan dengan kebutuhan bisnis Anda.",
-        "button": "Hubungi Kami Sekarang"
+      "title": "Temukan Solusi Penjaminan & Asuransi Terbaik untuk Bisnis Anda",
+      "desc": "Respon cepat dalam 1x24 jam. Tim ahli kami siap memberikan solusi asuransi yang dipersonalisasi dan disesuaikan dengan kebutuhan bisnis Anda.",
+      "button": "Hubungi Kami Sekarang"
     },
     "org_structure": {
       "pill": "Struktur Perusahaan",
@@ -245,7 +326,7 @@
       "subtitle": "Tim profesional kami bekerja secara terstruktur untuk memberikan layanan terbaik kepada mitra dan klien di seluruh Indonesia.",
       "bottom_note": "Struktur organisasi ini mencerminkan komitmen kami dalam tata kelola perusahaan yang baik dan pelayanan profesional kepada seluruh klien.",
       "levels": {
-        "pemegang_saham": "Pemegang Saham Pengendali",
+        "pemegang_saham": "RUPS",
         "komisaris": "Komisaris",
         "direktur_utama": "Direktur Utama",
         "direktur": "Direktur",
@@ -299,8 +380,6 @@
               "Staff RM 1",
               "Staff RM 2",
               "Staff RM 3",
-              "Staff RM 4",
-              "Staff RM 5",
               "Freelance Marketing",
               "Marketing Officer"
             ]
@@ -428,22 +507,47 @@
       "bg": {
         "title": "Bank Garansi",
         "desc": "Bank Garansi adalah produk terpercaya yang menawarkan jaminan dan keamanan finansial, memberikan ketenangan dan perlindungan untuk transaksi keuangan.",
-        "features": ["Jaminan Penawaran", "Jaminan Pelaksanaan", "Jaminan Uang Muka", "Jaminan Pemeliharaan", "BG Akhir Tahun"]
+        "features": [
+          "Jaminan Penawaran",
+          "Jaminan Pelaksanaan",
+          "Jaminan Uang Muka",
+          "Jaminan Pemeliharaan",
+          "BG Akhir Tahun"
+        ]
       },
       "sb": {
         "title": "Surety Bond",
         "desc": "Surety Bond adalah jaminan keuangan yang dapat diandalkan dan aman yang menjamin kinerja dan penyelesaian kontrak atau kewajiban.",
-        "features": ["Jaminan Pemeliharaan", "Jaminan Pembayaran", "Jaminan Penawaran", "Jaminan Pelaksanaan", "Jaminan Uang Muka"]
+        "features": [
+          "Jaminan Pemeliharaan",
+          "Jaminan Pembayaran",
+          "Jaminan Penawaran",
+          "Jaminan Pelaksanaan",
+          "Jaminan Uang Muka"
+        ]
       },
       "cb": {
         "title": "Custom Bond",
         "desc": "Custom Bond adalah jaminan pelaksanaan kepabeanan yang diterbitkan oleh perusahaan asuransi atau lembaga penjaminan untuk memastikan pemenuhan kewajiban pabean Anda secara efektif.",
-        "features": ["KITE", "KABER", "Vooruitslag", "SPKPBM", "TPS", "Impor Sementara (OB 23)"]
+        "features": [
+          "KITE",
+          "KABER",
+          "Vooruitslag",
+          "SPKPBM",
+          "TPS",
+          "Impor Sementara (OB 23)"
+        ]
       },
       "general": {
         "title": "Asuransi Umum",
         "desc": "Asuransi Umum memberikan perlindungan komprehensif atas aset dan kewajiban serta menjamin keamanan finansial.",
-        "features": ["Lambung Kapal", "Asuransi Kendaraan", "Asuransi Properti", "Tanggung Jawab Pihak Ketiga", "Kargo Laut"]
+        "features": [
+          "Lambung Kapal",
+          "Asuransi Kendaraan",
+          "Asuransi Properti",
+          "Tanggung Jawab Pihak Ketiga",
+          "Kargo Laut"
+        ]
       }
     }
   },
@@ -489,7 +593,7 @@
       "form_title": "Kirimkan pesan kepada kami",
       "service_label": "Layanan Diperlukan",
       "service_placeholder": "Pilih layanan",
-      "whatsapp_cta": "Ngobrol di WhatsApp"
+      "whatsapp_cta": "Hubungi via WhatsApp"
     }
   },
   "footer": {
@@ -503,8 +607,8 @@
   },
   "calculatorPage": {
     "title": "Kalkulator Premi",
-    "description": "Hitung estimasi premi jaminan Anda dengan cepat dan akurat.",
-    "wizardTitle": "Perhitungan Estimasi Premi",
+    "description": "Hitung estimasi premi penjaminan Anda dengan cepat dan akurat.",
+    "wizardTitle": "Perhitungan Estimasi Premi Penjaminan",
     "wizardDesc": "Isi setiap langkah secara berurutan. Langkah berikutnya akan terbuka setelah langkah saat ini valid.",
     "stepLabel": "Langkah",
     "stepHint1": "Masukkan nilai jaminan terlebih dahulu.",
