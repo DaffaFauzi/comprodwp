@@ -271,9 +271,7 @@
               "Project Technical Supervisor"
             ],
             "staff": [
-              "Staff 1",
-              "Staff 2",
-              "Staff 3"
+              "Staff"
             ]
           },
           "finance": {
@@ -296,9 +294,7 @@
               "Marketing Officer Supervisor"
             ],
             "staff": [
-              "RM Staff 1",
-              "RM Staff 2",
-              "RM Staff 3",
+              "RM Staff",
               "Freelance Marketing",
               "Marketing Officer"
             ]

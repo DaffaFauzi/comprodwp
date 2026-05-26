@@ -60,9 +60,9 @@ const supervisorIcons: Record<string, any> = {
   'General Affair Supervisor': ClipboardList,
   'Supervisor General Service': Settings,
   'General Service Supervisor': Settings,
-  'Supervisor Teknik Gudang': Wrench,
+  'Supervisor Teknik Cabang': Wrench,
   'Warehouse Technical Supervisor': Wrench,
-  'Supervisor Teknik Proyek': Briefcase,
+  'Supervisor Teknik Marketing': Briefcase,
   'Project Technical Supervisor': Briefcase,
   'Supervisor Finance': Calculator,
   'Finance Supervisor': Calculator,
@@ -85,17 +85,17 @@ const staffIcons: Record<string, any> = {
   'Cashier': Wallet,
   'Pelaksana OB': UserCheck,
   'Office Boy': UserCheck,
-  'Staff 1': FileText,
+  'Staff': FileText,
   'Staff 2': FileText,
   'Staff 3': FileText,
   'Finance Staff': Calculator,
   'AR Staff': Receipt,
   'Accounting Staff': Receipt,
   'Tax Staff': FileText,
-  'Staff RM 1': TrendingUp,
+  'Staff RM': TrendingUp,
   'Staff RM 2': TrendingUp,
   'Staff RM 3': TrendingUp,
-  'RM Staff 1': TrendingUp,
+  'RM Staff': TrendingUp,
   'RM Staff 2': TrendingUp,
   'RM Staff 3': TrendingUp,
   'Freelance Marketing': Monitor,
@@ -224,7 +224,7 @@ function getStaffForSupervisor(managerKey: string, supervisorIdx: number, allSta
     return supervisorIdx === 0 ? allStaff.slice(0, 2) : allStaff.slice(2)
   }
   if (managerKey === 'marketing') {
-    return supervisorIdx === 0 ? allStaff.slice(0, 3) : allStaff.slice(3)
+    return supervisorIdx === 0 ? allStaff.slice(0, 1) : allStaff.slice(1)
   }
   return []
 }

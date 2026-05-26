@@ -348,13 +348,11 @@
           "tech": {
             "title": "Manager Teknik",
             "supervisors": [
-              "Supervisor Teknik Gudang",
-              "Supervisor Teknik Proyek"
+              "Supervisor Teknik Cabang",
+              "Supervisor Teknik Marketing"
             ],
             "staff": [
-              "Staff 1",
-              "Staff 2",
-              "Staff 3"
+              "Staff"
             ]
           },
           "finance": {
@@ -377,9 +375,7 @@
               "Supervisor Marketing Officer"
             ],
             "staff": [
-              "Staff RM 1",
-              "Staff RM 2",
-              "Staff RM 3",
+              "Staff RM",
               "Freelance Marketing",
               "Marketing Officer"
             ]
