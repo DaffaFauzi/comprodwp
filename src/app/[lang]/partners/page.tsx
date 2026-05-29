@@ -1,19 +1,27 @@
 import { Locale } from '@/i18n-config'
 import { getDictionary } from '@/lib/dictionaries'
 import Image from 'next/image'
+import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
 import FadeIn from '@/components/FadeIn'
 import PartnerMarquee from '@/components/partners/PartnerMarquee'
 
-export const metadata = {
-  title: 'Our Partners',
-  description: 'List of our trusted insurance and bank partners',
+type PartnersPageProps = {
+  params: Promise<{ lang: string }>
 }
 
-export default async function PartnersPage({
-  params,
-}: {
-  params: Promise<{ lang: string }>
-}) {
+export async function generateMetadata({ params }: PartnersPageProps) {
+  const { lang } = await params
+  const locale = lang as Locale
+  const dictionary = await getDictionary(locale)
+
+  return {
+    title: dictionary.partners.title,
+    description: dictionary.partners.desc,
+  }
+}
+
+export default async function PartnersPage({ params }: PartnersPageProps) {
   const { lang } = await params
   const locale = lang as Locale
   const dictionary = await getDictionary(locale)
@@ -124,7 +132,7 @@ export default async function PartnersPage({
           <FadeIn>
             <div className="rounded-[40px] border border-slate-200 bg-white p-8 sm:p-10 shadow-[0_32px_100px_rgba(15,23,42,0.08)]">
               <div className="text-2xl sm:text-3xl font-black text-slate-900">{dictionary.partners.categories.insurance}</div>
-              <div className="mt-2 text-sm text-slate-600">{dictionary.partners.groups.insurance_bumn}</div>
+              <div className="mt-2 text-sm text-slate-600">{dictionary.partners.category_desc.insurance}</div>
 
               <div className="mt-8 space-y-6">
                 <div className="rounded-[32px] border border-slate-200 bg-slate-50 p-4 shadow-sm shadow-slate-200/50">
@@ -153,7 +161,7 @@ export default async function PartnersPage({
           <FadeIn>
             <div className="rounded-[40px] border border-slate-200 bg-white p-8 sm:p-10 shadow-[0_32px_100px_rgba(15,23,42,0.08)]">
               <div className="text-2xl sm:text-3xl font-black text-slate-900">{dictionary.partners.categories.bank}</div>
-              <div className="mt-2 text-sm text-slate-600">{dictionary.partners.groups.bank_government}</div>
+              <div className="mt-2 text-sm text-slate-600">{dictionary.partners.category_desc.bank}</div>
 
               <div className="mt-8 space-y-6">
                 <div className="rounded-[32px] border border-slate-200 bg-slate-50 p-4 shadow-sm shadow-slate-200/50">
@@ -175,6 +183,29 @@ export default async function PartnersPage({
                     />
                   </div>
                 </div>
+              </div>
+            </div>
+          </FadeIn>
+
+          <FadeIn>
+            <div className="relative overflow-hidden rounded-[32px] bg-[linear-gradient(135deg,#0B1220_0%,#2F5DAA_52%,#2CA7A4_100%)] px-7 py-9 sm:px-10 sm:py-11 shadow-[0_28px_80px_rgba(47,93,170,0.20)]">
+              <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-[0.08]" />
+              <div className="relative z-10 flex flex-col gap-7 lg:flex-row lg:items-center lg:justify-between">
+                <div className="max-w-2xl">
+                  <div className="text-2xl sm:text-3xl font-black text-white">
+                    {dictionary.partners.cta.title}
+                  </div>
+                  <p className="mt-3 text-sm sm:text-base leading-relaxed text-white/78">
+                    {dictionary.partners.cta.desc}
+                  </p>
+                </div>
+                <Link
+                  href={`/${locale}/contact`}
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-black text-[#1E3A8A] shadow-[0_18px_40px_rgba(15,23,42,0.20)] transition-transform hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#2F5DAA] sm:w-auto"
+                >
+                  {dictionary.partners.cta.button}
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
               </div>
             </div>
           </FadeIn>

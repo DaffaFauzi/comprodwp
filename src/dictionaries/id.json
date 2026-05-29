@@ -456,8 +456,8 @@
   },
   "partners": {
     "title": "Mitra Kami",
-    "subtitle": "Kerjasama Strategis",
-    "desc": "Kami bekerja sama dengan perusahaan asuransi terkemuka untuk memberikan layanan terbaik.",
+    "subtitle": "Kerja Sama Strategis",
+    "desc": "Kami bekerja sama dengan perusahaan asuransi, penjaminan, dan bank penerbit terpercaya untuk memberikan layanan terbaik.",
     "issuing_title": "Asuransi dan Bank Penerbit",
     "featured_partner_desc": "PT Asuransi Bangun Askrida",
     "featured_label": "Eksekutif Asuransi",
@@ -470,6 +470,15 @@
     "categories": {
       "insurance": "Mitra Asuransi",
       "bank": "Mitra Bank"
+    },
+    "category_desc": {
+      "insurance": "Jaringan mitra asuransi dan penjaminan terpercaya untuk mendukung kebutuhan penerbitan Anda.",
+      "bank": "Dukungan bank penerbit untuk kebutuhan Bank Garansi dan solusi jaminan bisnis."
+    },
+    "cta": {
+      "title": "Butuh dukungan penerbitan jaminan atau asuransi?",
+      "desc": "Tim DWP siap membantu memilih solusi dan mitra penerbit yang sesuai dengan kebutuhan bisnis Anda.",
+      "button": "Konsultasi Sekarang"
     },
     "list": {
       "insurance": [

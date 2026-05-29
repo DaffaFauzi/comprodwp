@@ -376,7 +376,7 @@
   "partners": {
     "title": "Our Partners",
     "subtitle": "Strategic Cooperation",
-    "desc": "We collaborate with leading insurance companies to provide the best service.",
+    "desc": "We collaborate with trusted insurance, surety, and issuing bank partners to deliver the best service.",
     "issuing_title": "Insurance & Issuing Banks",
     "featured_partner_desc": "Credit Insurance Indonesia",
     "featured_label": "Executive Insurer",
@@ -389,6 +389,15 @@
     "categories": {
       "insurance": "Insurance Partners",
       "bank": "Bank Partners"
+    },
+    "category_desc": {
+      "insurance": "A trusted insurance and surety partner network to support your issuance needs.",
+      "bank": "Issuing bank support for Bank Guarantees and business guarantee solutions."
+    },
+    "cta": {
+      "title": "Need support issuing guarantees or insurance?",
+      "desc": "The DWP team is ready to help you choose the right solution and issuing partner for your business needs.",
+      "button": "Consult Now"
     },
     "list": {
       "insurance": [
