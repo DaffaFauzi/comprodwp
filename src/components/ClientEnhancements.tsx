@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { AnimatePresence, motion } from 'framer-motion'
+import { BootstrapData } from '@/lib/cms'
 import {
   MessageCircle,
   X,
@@ -94,8 +95,15 @@ async function getAssistantReplyFromApi(input: string, pathname: string, lang: s
   return data.reply
 }
 
-export function ClientEnhancements({ lang }: { lang: string }) {
+export function ClientEnhancements({ lang, cmsData }: { lang: string, cmsData?: BootstrapData | null }) {
   const pathname = usePathname() ?? `/${lang}`
+
+  const whatsappNumber = useMemo(() => {
+    let raw = cmsData?.settings?.contact?.whatsapp || '6281288893223'
+    raw = raw.replace(/\D/g, '')
+    if (raw.startsWith('0')) raw = '62' + raw.substring(1)
+    return raw
+  }, [cmsData])
 
   useEffect(() => {
     if (typeof window === 'undefined') return
@@ -311,7 +319,7 @@ export function ClientEnhancements({ lang }: { lang: string }) {
         </AnimatePresence>
 
         <a
-          href="https://wa.me/6281288893223"
+          href={`https://wa.me/${whatsappNumber}`}
           className="h-12 w-12 rounded-full bg-[#25D366] text-white shadow-xl shadow-black/15 flex items-center justify-center"
           aria-label="WhatsApp"
         >

@@ -7,6 +7,7 @@ import Footer from '@/components/Footer'
 import { ClientEnhancements } from '@/components/ClientEnhancements'
 import AppMotionShell from '@/components/AppMotionShell'
 import InitialLoader from '@/components/InitialLoader'
+import { getCmsBootstrap } from '@/lib/cms'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -42,17 +43,19 @@ export default async function RootLayout({
   params: Promise<{ lang: string }>
 }) {
   const { lang } = await params
+  const locale = lang as Locale
+  const cmsData = await getCmsBootstrap('home', locale)
   
   return (
     <html suppressHydrationWarning lang={lang} className={`scroll-smooth ${inter.variable} ${poppins.variable}`}>
       <body suppressHydrationWarning className="min-h-screen flex flex-col antialiased font-sans">
         <InitialLoader>
-          <Header lang={lang as Locale} />
+          <Header lang={locale} cmsData={cmsData} />
           <main className="flex-1">
             <AppMotionShell lang={lang}>{children}</AppMotionShell>
           </main>
-          <ClientEnhancements lang={lang} />
-          <Footer lang={lang as Locale} />
+          <ClientEnhancements lang={lang} cmsData={cmsData} />
+          <Footer lang={locale} cmsData={cmsData} />
         </InitialLoader>
       </body>
     </html>

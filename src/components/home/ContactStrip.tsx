@@ -1,12 +1,24 @@
 import { Locale } from '@/i18n-config'
 import { getDictionary } from '@/lib/dictionaries'
+import { BootstrapData, getCmsSection, getCmsAssetUrl } from '@/lib/cms'
 import { Mail, MapPin, Phone } from 'lucide-react'
 import FadeIn from '@/components/FadeIn'
 import ContactForm from '@/components/ContactForm'
 import SafeImage from '@/components/SafeImage'
 
-export default async function ContactStrip({ lang }: { lang: Locale }) {
+export default async function ContactStrip({ lang, cmsData }: { lang: Locale, cmsData?: BootstrapData | null }) {
   const dictionary = await getDictionary(lang)
+  const contactInfo = cmsData?.settings?.contact || {}
+  
+  const section = getCmsSection(cmsData?.sections, 'contact_strip')
+  const content = (section?.content || {}) as any
+  
+  const titleLine1 = content.title_lines?.line1 || dictionary.contact.home_strip.title_line1
+  const titleLine2 = content.title_lines?.line2 || dictionary.contact.home_strip.title_line2
+  const subtitle = content.subtitle || dictionary.contact.home_strip.subtitle
+  const phone = contactInfo.phone || dictionary.contact.phone
+  const email = contactInfo.email || dictionary.contact.email
+  const address = contactInfo.address || dictionary.contact.home_strip.office_value
 
   return (
     <section className="bg-white section-y">
@@ -17,7 +29,7 @@ export default async function ContactStrip({ lang }: { lang: Locale }) {
               <div className="relative overflow-hidden">
                 <div className="absolute inset-0">
                   <SafeImage
-                    src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200&auto=format&fit=crop"
+                    src={getCmsAssetUrl(section?.assets?.[0]?.path) || "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200&auto=format&fit=crop"}
                     alt={
                       lang === 'id'
                         ? 'Tim DWP sedang berdiskusi dengan klien bisnis'
@@ -32,11 +44,11 @@ export default async function ContactStrip({ lang }: { lang: Locale }) {
                 <div className="relative p-10 sm:p-12 lg:p-14 text-white">
                   <FadeIn direction="right">
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-[1.05]">
-                      <span className="block">{dictionary.contact.home_strip.title_line1}</span>
-                      <span className="block">{dictionary.contact.home_strip.title_line2}</span>
+                      <span className="block">{titleLine1}</span>
+                      <span className="block">{titleLine2}</span>
                     </h2>
                     <p className="mt-5 text-sm sm:text-base text-white/90 leading-relaxed max-w-md">
-                      {dictionary.contact.home_strip.subtitle}
+                      {subtitle}
                     </p>
 
                     <div className="mt-8 grid gap-4 max-w-md">
@@ -49,7 +61,7 @@ export default async function ContactStrip({ lang }: { lang: Locale }) {
                             <div className="text-[11px] font-semibold text-white/75 tracking-[0.14em] uppercase">
                               {dictionary.contact.phone_label}
                             </div>
-                            <div className="mt-1 text-sm font-bold text-white">{dictionary.contact.phone}</div>
+                            <div className="mt-1 text-sm font-bold text-white">{phone}</div>
                           </div>
                         </div>
                       </div>
@@ -63,7 +75,7 @@ export default async function ContactStrip({ lang }: { lang: Locale }) {
                             <div className="text-[11px] font-semibold text-white/75 tracking-[0.14em] uppercase">
                               {dictionary.contact.email_label}
                             </div>
-                            <div className="mt-1 text-sm font-bold text-white">{dictionary.contact.email}</div>
+                            <div className="mt-1 text-sm font-bold text-white">{email}</div>
                           </div>
                         </div>
                       </div>
@@ -78,7 +90,7 @@ export default async function ContactStrip({ lang }: { lang: Locale }) {
                               {dictionary.contact.home_strip.office_label}
                             </div>
                             <div className="mt-1 text-sm font-bold text-white">
-                              {dictionary.contact.home_strip.office_value}
+                              {address}
                             </div>
                           </div>
                         </div>

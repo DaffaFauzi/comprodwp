@@ -7,6 +7,7 @@ import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import { useMemo, useState } from 'react'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
+import { BootstrapData } from '@/lib/cms'
 
 type NavigationCopy = {
   home: string
@@ -26,15 +27,35 @@ function normalizePath(input: string) {
 export default function HeaderClient({
   lang,
   navigation,
+  cmsData,
 }: {
   lang: string
   navigation: NavigationCopy
+  cmsData?: BootstrapData | null
 }) {
   const pathname = usePathname() ?? `/${lang}`
   const reduceMotion = useReducedMotion()
   const [isOpen, setIsOpen] = useState(false)
 
   const links = useMemo(() => {
+    if (cmsData?.menus?.header?.length) {
+      type CmsMenuItem = {
+        label?: string
+        url?: string
+      }
+      return cmsData.menus.header.map((item: CmsMenuItem, i: number) => {
+        let href = item.url || '#'
+        if (href.startsWith('/') && !href.startsWith(`/${lang}`)) {
+          href = `/${lang}${href === '/' ? '' : href}`
+        }
+        return {
+          key: `cms_menu_${i}`,
+          href,
+          label: item.label || '',
+          match: (item.url === '/' ? 'exact' : 'startsWith') as 'exact' | 'startsWith'
+        }
+      })
+    }
     return [
       { key: 'about', href: `/${lang}/about`, label: navigation.about, match: 'startsWith' as const },
       { key: 'products', href: `/${lang}/products`, label: navigation.products, match: 'startsWith' as const },
@@ -47,7 +68,7 @@ export default function HeaderClient({
       { key: 'partners', href: `/${lang}/partners`, label: navigation.partners, match: 'startsWith' as const },
       { key: 'contact', href: `/${lang}/contact`, label: navigation.contact, match: 'startsWith' as const },
     ]
-  }, [lang, navigation])
+  }, [lang, navigation, cmsData])
 
   const current = normalizePath(pathname)
 

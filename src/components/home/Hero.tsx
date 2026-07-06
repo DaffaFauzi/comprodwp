@@ -4,8 +4,29 @@ import { Locale } from '@/i18n-config'
 import { ArrowRight, Clock, HeartHandshake, ShieldCheck, Zap } from 'lucide-react'
 import FadeIn from '@/components/FadeIn'
 
-export default async function Hero({ lang }: { lang: Locale }) {
+import { BootstrapData, getCmsSection } from '@/lib/cms'
+
+export default async function Hero({ lang, cmsData }: { lang: Locale, cmsData?: BootstrapData | null }) {
   const dictionary = await getDictionary(lang)
+  
+  const heroSection = getCmsSection(cmsData?.sections, 'hero')
+  const cmsContent = (heroSection?.content || {}) as any
+  
+  const headline = cmsContent.title_lines ? {
+    line1: cmsContent.title_lines.line1 || dictionary.hero.headline.line1,
+    line2: {
+      a: cmsContent.title_lines.line2?.a || dictionary.hero.headline.line2.a,
+      b: cmsContent.title_lines.line2?.b || dictionary.hero.headline.line2.b,
+      c: cmsContent.title_lines.line2?.c || dictionary.hero.headline.line2.c,
+    },
+    line3: cmsContent.title_lines.line3 || dictionary.hero.headline.line3
+  } : dictionary.hero.headline
+  
+  const subtitle = cmsContent.subtitle || dictionary.hero.subtitle
+  const pillText = cmsContent.pill_text || dictionary.hero.pill
+  const primaryCta = cmsContent.primary_cta?.text || dictionary.hero.cta_primary
+  const secondaryCta = cmsContent.secondary_cta?.text || dictionary.hero.cta_secondary
+  
   const sellingPoints = [
     { key: 'secure', title: dictionary.home.hero_cards.secure_title, desc: dictionary.home.hero_cards.secure_desc, icon: ShieldCheck },
     { key: 'fast', title: dictionary.home.hero_cards.fast_title, desc: dictionary.home.hero_cards.fast_desc, icon: Zap },
@@ -29,26 +50,26 @@ export default async function Hero({ lang }: { lang: Locale }) {
             
             <div className="inline-flex items-center self-start gap-2.5 rounded-full bg-dwp-blue/5 border border-dwp-blue/10 px-4 py-1.5 shadow-sm shadow-dwp-blue/5 text-sm font-bold text-dwp-blue transition-colors hover:bg-dwp-blue/10">
               <ShieldCheck className="w-4 h-4" />
-              <span>{dictionary.hero.pill}</span>
+              <span>{pillText}</span>
             </div>
 
             {/* Headings */}
             <div className="space-y-3">
               <h1 className="text-[44px] md:text-[56px] lg:text-[64px] font-black font-heading tracking-tight text-slate-900 leading-[1.05] max-w-2xl lg:max-w-3xl">
-                <span className="block">{dictionary.hero.headline.line1}</span>
+                <span className="block">{headline.line1}</span>
                 <span className="block">
                   <span className="bg-[linear-gradient(90deg,#2F5DAA_0%,#2CA7A4_100%)] bg-clip-text text-transparent">
-                    {dictionary.hero.headline.line2.a}
+                    {headline.line2.a}
                   </span>{' '}
-                  <span className="text-slate-900">{dictionary.hero.headline.line2.b}</span>{' '}
+                  <span className="text-slate-900">{headline.line2.b}</span>{' '}
                   <span className="bg-[linear-gradient(90deg,#2F5DAA_0%,#2CA7A4_100%)] bg-clip-text text-transparent">
-                    {dictionary.hero.headline.line2.c}
+                    {headline.line2.c}
                   </span>
                 </span>
-                <span className="block">{dictionary.hero.headline.line3}</span>
+                <span className="block">{headline.line3}</span>
               </h1>
               <p className="mt-4 text-base md:text-lg text-slate-600 leading-relaxed max-w-xl lg:max-w-2xl">
-                {dictionary.hero.subtitle}
+                {subtitle}
               </p>
             </div>
 
@@ -58,14 +79,14 @@ export default async function Hero({ lang }: { lang: Locale }) {
                 href={`/${lang}/contact`}
                 className="inline-flex h-12 sm:h-14 items-center justify-center rounded-full bg-[linear-gradient(90deg,#2F5DAA_0%,#2CA7A4_100%)] px-7 sm:px-10 text-base font-black text-white shadow-[0_18px_40px_rgba(47,93,170,0.22)] transition-all hover:shadow-[0_22px_46px_rgba(47,93,170,0.28)] hover:-translate-y-0.5 active:translate-y-0"
               >
-                {dictionary.hero.cta_primary}
+                {primaryCta}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 href={`/${lang}/products`}
                 className="inline-flex h-12 sm:h-14 items-center justify-center rounded-2xl border-2 border-slate-200 bg-white px-7 sm:px-10 text-base font-black text-slate-900 shadow-sm shadow-slate-200/60 transition-all hover:bg-slate-50 hover:shadow-md"
               >
-                {dictionary.hero.cta_secondary}
+                {secondaryCta}
               </Link>
             </div>
 

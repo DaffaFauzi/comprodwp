@@ -1,13 +1,35 @@
 import Link from 'next/link'
 import { getDictionary } from '@/lib/dictionaries'
 import { Locale } from '@/i18n-config'
+import { BootstrapData, getCmsSection } from '@/lib/cms'
 import { Shield, FileCheck, Truck, Building2, ArrowRight, ArrowUpRight } from 'lucide-react'
 import FadeIn from '@/components/FadeIn'
 
-export default async function Services({ lang }: { lang: Locale }) {
+export default async function Services({ lang, cmsData }: { lang: Locale, cmsData?: BootstrapData | null }) {
   const dictionary = await getDictionary(lang)
+  
+  const section = getCmsSection(cmsData?.sections, 'services_preview')
+  const content = (section?.content || {}) as any
+  
+  const title = content.title || dictionary.home.comprehensive_title
+  const subtitle = content.subtitle || dictionary.home.comprehensive_subtitle
+  const ctaText = content.primary_cta?.text || dictionary.services.cta
 
-  const services = [
+
+  
+  const servicesData = content.services?.length ?
+    content.services.map((s: { title: string; description: string }, i: number) => ({
+      id: `cms_service_${i}`,
+      title: s.title,
+      desc: s.description,
+      icon: Shield,
+      bg: ['bg-blue-50', 'bg-teal-50', 'bg-orange-50', 'bg-indigo-50'][i % 4]
+    }))
+    : null
+    
+  type ServiceItem = { id: string; icon: React.ElementType; bg: string; border?: string; title?: string; desc?: string }
+
+  const services: ServiceItem[] = servicesData || [
     {
       id: 'bank_garansi',
       icon: Shield,
@@ -51,10 +73,10 @@ export default async function Services({ lang }: { lang: Locale }) {
         
         <FadeIn className="text-center max-w-2xl mx-auto">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black font-heading tracking-tight text-slate-900">
-            {dictionary.home.comprehensive_title}
+            {title}
           </h2>
           <p className="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed">
-            {dictionary.home.comprehensive_subtitle}
+            {subtitle}
           </p>
           <div className="mt-6 h-[3px] w-24 mx-auto rounded-full bg-gradient-to-r from-dwp-blue to-dwp-teal" />
         </FadeIn>
@@ -62,7 +84,7 @@ export default async function Services({ lang }: { lang: Locale }) {
         {/* Cards Grid */}
         <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => {
-            const item = dictionary.services.items[service.id as keyof typeof dictionary.services.items]
+            const item = service.id.startsWith('cms_') ? { title: service.title, desc: service.desc } : dictionary.services.items[service.id as keyof typeof dictionary.services.items]
             const Icon = service.icon
 
             return (
@@ -80,7 +102,7 @@ export default async function Services({ lang }: { lang: Locale }) {
                   <Link
                     href={`/${lang}/products`}
                     className="absolute inset-0 rounded-2xl"
-                    aria-label={dictionary.services.aria_view_details.replace('{title}', item.title)}
+                    aria-label={dictionary.services.aria_view_details.replace('{title}', item.title || '')}
                   />
                 </div>
               </FadeIn>
@@ -93,7 +115,7 @@ export default async function Services({ lang }: { lang: Locale }) {
             href={`/${lang}/products`}
             className="inline-flex items-center justify-center rounded-full bg-[linear-gradient(90deg,#2F5DAA_0%,#2CA7A4_100%)] px-8 py-4 text-sm sm:text-base font-black text-white shadow-[0_18px_40px_rgba(47,93,170,0.22)] transition-all hover:shadow-[0_22px_46px_rgba(47,93,170,0.28)]"
           >
-            {dictionary.services.cta}
+            {ctaText}
             <ArrowRight className="ml-2 h-5 w-5 text-white" />
           </Link>
         </FadeIn>

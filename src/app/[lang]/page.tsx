@@ -5,6 +5,7 @@ import Services from '@/components/home/Services'
 import Process from '@/components/home/Process'
 import WhyChooseUs from '@/components/home/WhyChooseUs'
 import ContactStrip from '@/components/home/ContactStrip'
+import { getCmsBootstrap } from '@/lib/cms'
 
 export const dynamic = 'force-dynamic'
 
@@ -17,14 +18,16 @@ export default async function Home({
   const locale = lang as Locale
   await new Promise((resolve) => setTimeout(resolve, 1000))
   
+  const cmsData = await getCmsBootstrap('home', locale)
+
   return (
     <>
-      <Hero lang={locale} />
-      <AboutSummary lang={locale} />
-      <Services lang={locale} />
+      <Hero lang={locale} cmsData={cmsData} />
+      <AboutSummary lang={locale} cmsData={cmsData} />
+      <Services lang={locale} cmsData={cmsData} />
       <WhyChooseUs lang={locale} />
       <Process lang={locale} />
-      <ContactStrip lang={locale} />
+      <ContactStrip lang={locale} cmsData={cmsData} />
     </>
   )
 }
